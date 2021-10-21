@@ -13,7 +13,7 @@ public class PostAuthRequest {
                 .header("Content-Type", "application/json")
                 .when()
                 .body(authPayloads.jsonAuthLogin().toString())
-                .post("auth");
+                .post("auth"); //método POST
     }
 
     public String getToken() {
