@@ -2,6 +2,7 @@ package br.com.restassuredapitesting.tests.booking.tests;
 
 import br.com.restassuredapitesting.base.BaseTest;
 import br.com.restassuredapitesting.suites.AllTests;
+import br.com.restassuredapitesting.suites.ContractTests;
 import br.com.restassuredapitesting.tests.booking.requests.GetBookingRequest;
 import br.com.restassuredapitesting.utils.Utils;
 import org.junit.Test;
@@ -26,7 +27,7 @@ public class GetBookingTest extends BaseTest{
     }
 
     @Test
-    @Category({})
+    @Category({AllTests.class, ContractTests.class})
     public void validaSchemaDaListagemDeReservas() {
         getBookingRequest.bookingReturnIds()
                 .then()
