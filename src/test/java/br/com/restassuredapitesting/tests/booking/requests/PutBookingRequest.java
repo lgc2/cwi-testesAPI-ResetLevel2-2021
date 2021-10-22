@@ -1,6 +1,7 @@
 package br.com.restassuredapitesting.tests.booking.requests;
 
 import br.com.restassuredapitesting.tests.booking.payloads.BookingPayLoads;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.json.JSONException;
 
@@ -10,6 +11,7 @@ public class PutBookingRequest {
 
     BookingPayLoads bookingPayLoads = new BookingPayLoads();
 
+    @Step("Atualiza uma reserva específica com o parâmetro token")
     public Response updateBookingToken(int id, String token) throws JSONException {
         return given()
                 .header("Content-Type", "application/json")
