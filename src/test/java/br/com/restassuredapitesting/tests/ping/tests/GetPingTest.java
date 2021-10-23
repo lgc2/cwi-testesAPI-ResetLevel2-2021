@@ -20,13 +20,15 @@ public class GetPingTest extends BaseTest{
     @Severity(SeverityLevel.BLOCKER)
     @Category({AllTests.class, HealthcheckTest.class})
     @DisplayName("Verificar se a API está online")
-    public void validaApiOnline() { //também chamado de HealthCheck
+    public void validaApiOnline() { // Também chamado de HealthCheck
 
         getPingRequest.pingReturnApi()
                 .then()
-                .statusCode(201); //código obtido da documentação
-//                .time(lessThan(2L), TimeUnit.SECONDS);
+                .statusCode(201); // Código obtido da documentação. Ideal seria código 200 --> ver arquivo pdf
+
     }
 
 
 }
+
+//                .time(lessThan(2L), TimeUnit.SECONDS);

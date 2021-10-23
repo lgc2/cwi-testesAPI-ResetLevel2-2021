@@ -3,6 +3,8 @@ package br.com.restassuredapitesting.tests.booking.requests;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
+import java.util.Date;
+
 import static io.restassured.RestAssured.given;
 
 public class GetBookingRequest {
@@ -14,11 +16,36 @@ public class GetBookingRequest {
                 .get("booking");
     }
 
-    @Step("Retorna um ID específico de Reservas")
+    @Step("Retorna uma Reserva Específica através de seu ID")
     public Response specificBookingReturnId(int id) {
         return given()
                 .header("Accept", "application/json")
                 .when()
                 .get("booking/"+id);
     }
+
+    @Step("Retorna uma Listagem de Reservas utilizando o filto 'firstname'")
+    public Response bookingReturnByFirstname(String firstname) {
+        return given()
+                .when()
+//                .log().all()
+                .get("booking?firstname="+firstname);
+    }
+
+    @Step("Retorna uma Listagem de Reservas utilizando o filto 'lastname'")
+    public Response bookingReturnByLastname(String lastname) {
+        return given()
+                .when()
+//                .log().all()
+                .get("booking?lastname="+lastname);
+    }
+
+    @Step("Retorna uma Listagem de Reservas utilizando o filto 'checkin' ou 'checkout'")
+    public Response bookingReturnByDate(String check, String date) {
+        return given()
+                .when()
+                .log().all()
+                .get("booking?"+check+date);
+    }
+
 }

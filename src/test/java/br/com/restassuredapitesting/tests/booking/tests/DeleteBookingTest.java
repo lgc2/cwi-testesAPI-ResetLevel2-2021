@@ -34,7 +34,7 @@ public class DeleteBookingTest extends BaseTest {
 
         deleteBookingRequest.deleteBookingId(segundoId, postAuthRequest.getToken())
                 .then()
-                .statusCode(201); // Código obtido na documentação --> 201 Created
+                .statusCode(201); // Código obtido da documentação. Ideal seria código 200 --> ver arquivo pdf
     }
 
 
