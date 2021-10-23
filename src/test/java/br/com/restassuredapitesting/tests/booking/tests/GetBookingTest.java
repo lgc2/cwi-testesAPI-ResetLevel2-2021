@@ -44,4 +44,24 @@ public class GetBookingTest extends BaseTest{
                 .body(matchesJsonSchema(new File(Utils.getSchemaBasePath("booking", "bookings"))));
 
     }
+
+    // Foi deletado do arquivo .json, em "required properties", o atributo "additionalneeds",
+    // pois através do postman pude constatar que as reservas de lá também estavam sem este atributo.
+    @Test
+    @Severity(SeverityLevel.BLOCKER)
+    @Category({AllTests.class, ContractTests.class})
+    @DisplayName("Garantir o Schema de retorno de um ID de reserva específico")
+    public void validaSchemaDeUmaReservaEspecifica() {
+        int segundoId = getBookingRequest.bookingReturnIds()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("[1].bookingid");
+
+        getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .body(matchesJsonSchema(new File(Utils.getSchemaBasePath
+                        ("booking", "specificBooking"))));
+    }
 }
