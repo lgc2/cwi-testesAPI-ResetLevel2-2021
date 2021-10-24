@@ -3,8 +3,6 @@ package br.com.restassuredapitesting.tests.booking.requests;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-import java.util.Date;
-
 import static io.restassured.RestAssured.given;
 
 public class GetBookingRequest {
@@ -46,6 +44,22 @@ public class GetBookingRequest {
                 .when()
                 .log().all()
                 .get("booking?"+check+date);
+    }
+
+    @Step("Retorna uma Listagem de Reservas utilizando os filtos 'checkin' e 'checkout'")
+    public Response bookingReturnByCheckinAndCheckout(String checkinDate, String checkoutDate) {
+        return given()
+                .when()
+                .log().all()
+                .get("booking?checkin="+checkinDate+"&checkout="+checkoutDate);
+    }
+
+    @Step("Retorna uma Listagem de Reservas utilizando os filtos 'firstname', 'checkin' e 'checkout'")
+    public Response bookingReturnByFirstNameAndCheckinAndCheckout(String firstname, String checkinDate, String checkoutDate) {
+        return given()
+                .when()
+                .log().all()
+                .get("booking?firstname="+firstname+"&checkin="+checkinDate+"&checkout="+checkoutDate);
     }
 
 }

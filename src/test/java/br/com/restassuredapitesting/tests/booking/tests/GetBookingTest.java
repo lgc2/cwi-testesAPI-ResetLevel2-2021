@@ -14,7 +14,6 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 import java.io.File;
-import java.util.Date;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static org.hamcrest.Matchers.greaterThan;
@@ -157,7 +156,9 @@ public class GetBookingTest extends BaseTest{
         getBookingRequest.bookingReturnByDate(check, date)
                 .then()
                 .log().all()
-                .statusCode(200);
+                .statusCode(200)
+                .body("size()", greaterThan(0)); // Tem que ser > 0 pois peguei de uma reserva existente
+
         // Consta na documentação que, o filtro de datas deveria retornar reservas de mesma data para
         // frente, o que não está ocorrendo. A API com filtro checkin está retornando apenas reservas
         // com datas posteriores a do filtro. No arquivo pdf isto é citado.
@@ -179,15 +180,90 @@ public class GetBookingTest extends BaseTest{
                 .then()
                 .statusCode(200)
                 .extract()
-                .path("bookingdates.checkout"); // Extraindo data de checkin da segunda reserva
+                .path("bookingdates.checkout"); // Extraindo data de checkout da segunda reserva
 
         getBookingRequest.bookingReturnByDate(check, date)
                 .then()
                 .log().all()
-                .statusCode(200);
+                .statusCode(200)
+                .body("size()", greaterThan(0)); // Tem que ser > 0 pois peguei de uma reserva existente
+
         // Consta na documentação que, o filtro de datas deveria retornar reservas de mesma data para
         // frente, o que não está ocorrendo. A API com filtro checkout está retornando reservas com datas anteriores
         // ou iguais a do filtro. No arquivo pdf isto é citado.
     }
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Category({AllTests.class, AcceptanceTests.class})
+    @DisplayName("Listar reservas através dos filtros 'chekin' e 'checkout'")
+    public void validaListagemDeReservasPelosFiltrosCheckinECheckout() {
+        int segundoId = getBookingRequest.bookingReturnIds()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
+
+        String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
+
+        String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkout"); // Extraindo data de checkin da segunda reserva
+
+        getBookingRequest.bookingReturnByCheckinAndCheckout(checkinDate, checkoutDate)
+                .then()
+                .statusCode(200)
+                .log().all()
+                .body("size()", greaterThan(0)); // Deveria ser > 0 pois peguei de uma reserva existente
+
+        // Existe um bug aqui pois está retornando um Array vazio, o que não deveria ocorrer já que peguei dados
+        // válidos de checkin e checkout de uma reserva existente (segundo ID de reservas).
+    }
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Category({AllTests.class, AcceptanceTests.class})
+    @DisplayName("Listar reservas através dos filtros 'firstname', 'chekin' e 'checkout'")
+    public void validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout() {
+        int segundoId = getBookingRequest.bookingReturnIds()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
+
+        String firstname = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("firstname"); // Extraindo firstname da segunda reserva
+
+        String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
+
+        String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkout"); // Extraindo data de checkin da segunda reserva
+
+        getBookingRequest.bookingReturnByFirstNameAndCheckinAndCheckout(firstname, checkinDate, checkoutDate)
+                .then()
+                .statusCode(200)
+                .log().all()
+                .body("size()", greaterThan(0)); // Deveria ser > 0 pois peguei de uma reserva existente
+
+        // Existe um bug aqui pois está retornando um Array vazio, o que não deveria ocorrer já que peguei dados
+        // válidos de firstname, checkin e checkout de uma reserva existente (segundo ID de reservas).
+    }
+
 
 }
