@@ -23,6 +23,36 @@ public class GetBookingTest extends BaseTest{
 
     GetBookingRequest getBookingRequest = new GetBookingRequest();
 
+    int segundoId = getBookingRequest.bookingReturnIds()
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
+
+    String firstname = getBookingRequest.specificBookingReturnId(segundoId)
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("firstname"); // Extraindo firstname da segunda reserva
+
+    String lastname = getBookingRequest.specificBookingReturnId(segundoId)
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("lastname"); // Extraindo lastname da segunda reserva
+
+    String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
+
+    String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("bookingdates.checkout"); // Extraindo data de checkout da segunda reserva
+
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @Category({AllTests.class, AcceptanceTests.class})
@@ -43,7 +73,6 @@ public class GetBookingTest extends BaseTest{
                 .then()
                 .statusCode(200)
                 .body(matchesJsonSchema(new File(Utils.getSchemaBasePath("booking", "bookings"))));
-
     }
 
     // Foi deletado do arquivo .json, em "required properties", o atributo "additionalneeds",
@@ -53,12 +82,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, ContractTests.class})
     @DisplayName("Garantir o Schema de retorno de um ID de reserva específico")
     public void validaSchemaDeUmaReservaEspecifica() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid");
-
         getBookingRequest.specificBookingReturnId(segundoId)
                 .then()
                 .statusCode(200)
@@ -71,12 +94,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar uma reserva específica através do ID")
     public void listaReservaEspecifica() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
         getBookingRequest.specificBookingReturnId(segundoId)
                 .then()
                 .statusCode(200)
@@ -88,18 +105,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através do filtro 'firstname'")
     public void validaListagemDeReservasPeloFiltroFirstname() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
-        String firstname = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("firstname"); // Extraindo firstname da segunda reserva
-
         getBookingRequest.bookingReturnByFirstname(firstname)
                 .then()
 //                .log().all()
@@ -114,18 +119,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através do filtro 'lastname'")
     public void validaListagemDeReservasPeloFiltroLastname() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
-        String lastname = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("lastname"); // Extraindo lastname da segunda reserva
-
         getBookingRequest.bookingReturnByLastname(lastname)
                 .then()
 //                .log().all()
@@ -140,12 +133,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através do filtro 'checkin'")
     public void validaListagemDeReservasPeloFiltroCheckin() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
         String check = "checkin="; // Variável para concatenar 'checkin=' no path
         String date = getBookingRequest.specificBookingReturnId(segundoId)
                 .then()
@@ -169,12 +156,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através do filtro 'checkout'")
     public void validaListagemDeReservasPeloFiltroCheckout() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
         String check = "checkout="; // Variável para concatenar 'checkout=' no path
         String date = getBookingRequest.specificBookingReturnId(segundoId)
                 .then()
@@ -198,24 +179,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através dos filtros 'chekin' e 'checkout'")
     public void validaListagemDeReservasPelosFiltrosCheckinECheckout() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
-        String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
-
-        String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkout"); // Extraindo data de checkin da segunda reserva
-
         getBookingRequest.bookingReturnByCheckinAndCheckout(checkinDate, checkoutDate)
                 .then()
                 .statusCode(200)
@@ -231,30 +194,6 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através dos filtros 'firstname', 'chekin' e 'checkout'")
     public void validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
-
-        String firstname = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("firstname"); // Extraindo firstname da segunda reserva
-
-        String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
-
-        String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkout"); // Extraindo data de checkin da segunda reserva
-
         getBookingRequest.bookingReturnByFirstNameAndCheckinAndCheckout(firstname, checkinDate, checkoutDate)
                 .then()
                 .statusCode(200)

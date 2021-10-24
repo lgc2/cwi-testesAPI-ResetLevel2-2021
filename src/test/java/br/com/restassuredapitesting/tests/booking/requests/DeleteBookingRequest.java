@@ -13,6 +13,7 @@ public class DeleteBookingRequest {
                 .header("Content-Type", "application/json")
                 .header("Cookie", token)
                 .when()
+                .log().all()
                 .delete("booking/"+id); //método DELETE
     }
 

@@ -3,6 +3,7 @@ package br.com.restassuredapitesting.tests.booking.tests;
 import br.com.restassuredapitesting.base.BaseTest;
 import br.com.restassuredapitesting.suites.AcceptanceTests;
 import br.com.restassuredapitesting.suites.AllTests;
+import br.com.restassuredapitesting.suites.E2eTests;
 import br.com.restassuredapitesting.tests.auth.requests.PostAuthRequest;
 import br.com.restassuredapitesting.tests.booking.requests.DeleteBookingRequest;
 import br.com.restassuredapitesting.tests.booking.requests.GetBookingRequest;
@@ -21,20 +22,49 @@ public class DeleteBookingTest extends BaseTest {
     GetBookingRequest getBookingRequest = new GetBookingRequest();
     PostAuthRequest postAuthRequest = new PostAuthRequest();
 
+    // Variáveis comuns a métodos diferentes
+    int segundoId = getBookingRequest.bookingReturnIds()
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("[1].bookingid");
+
     @Test
     @Severity(SeverityLevel.NORMAL)
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Deletar uma reserva utilizando o token")
     public void validarExclusaoDeUmaReservaUtilizandoToken() {
-        int segundoId = getBookingRequest.bookingReturnIds()
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("[1].bookingid");
-
         deleteBookingRequest.deleteBookingId(segundoId, postAuthRequest.getToken())
                 .then()
                 .statusCode(201); // Código obtido da documentação. Ideal seria código 200 --> ver arquivo pdf
+    }
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Category({AllTests.class, E2eTests.class})
+    @DisplayName("Tentar excluir uma reserva que não existe")
+    public void validarTentativaDeExclusaoDeReservaInexistente() {
+        //Pegando como ID o máximo valor inteiro da linguagem, garantindo assim que este valor não esteja na
+        // lista de IDs de reservas
+        int id = Integer.MAX_VALUE;
+
+        deleteBookingRequest.deleteBookingId(id, postAuthRequest.getToken())
+                .then()
+                .log().all()
+                .statusCode(405); // Not Allowed, já que o ID informado não existe
+    }
+
+    @Test
+    @Severity(SeverityLevel.BLOCKER)
+    @Category({AllTests.class, E2eTests.class})
+    @DisplayName("Tentar excluir uma reserva sem autorização")
+    public void validarTentativaDeExclusaoDeReservaSemAutorizacao() {
+        String tokenInvalido = "";
+
+        deleteBookingRequest.deleteBookingId(segundoId, tokenInvalido)
+                .then()
+                .log().all()
+                .statusCode(403); // Forbidden, já que o usuário não tem autorização para deletar esta reserva
     }
 
 
