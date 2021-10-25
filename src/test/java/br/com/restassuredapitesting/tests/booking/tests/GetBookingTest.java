@@ -4,6 +4,7 @@ import br.com.restassuredapitesting.base.BaseTest;
 import br.com.restassuredapitesting.suites.AcceptanceTests;
 import br.com.restassuredapitesting.suites.AllTests;
 import br.com.restassuredapitesting.suites.ContractTests;
+import br.com.restassuredapitesting.suites.E2eTests;
 import br.com.restassuredapitesting.tests.booking.requests.GetBookingRequest;
 import br.com.restassuredapitesting.utils.Utils;
 import io.qameta.allure.Feature;
@@ -202,6 +203,28 @@ public class GetBookingTest extends BaseTest{
 
         // Existe um bug aqui pois está retornando um Array vazio, o que não deveria ocorrer já que peguei dados
         // válidos de firstname, checkin e checkout de uma reserva existente (segundo ID de reservas).
+    }
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Category({AllTests.class, E2eTests.class})
+    @DisplayName("Visualizar erro de servidor 500 quando enviar filtro mal formatado")
+    public void validaErro500QuandoEnviarFiltroMalFormatado() {
+        String check = "checkiiinnn="; // Variável escrita de maneira ERRADA para concatenar 'checkiiinnn=' no path
+        String date = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
+
+        getBookingRequest.bookingReturnByDate(check, date)
+                .then()
+                .log().all()
+                .statusCode(500);
+
+        // Erroneamente a API está retornando a lista completa de todos os IDs de reservas e, status code 200,
+        // quando um filtro inválido é digitado. Está se comportando como se tivesse fornecido a URL:
+        // https://treinamento-api.herokuapp.com/booking.
     }
 
 
