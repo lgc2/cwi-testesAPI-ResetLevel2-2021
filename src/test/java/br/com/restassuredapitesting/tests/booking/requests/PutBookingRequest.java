@@ -24,6 +24,7 @@ public class PutBookingRequest {
 
     }
 
+    @Step("Tenta atualizar uma reserva sem enviar token")
     public Response updateBookingWithoutToken(int id) {
         return given()
                 .header("Content-Type", "application/json")

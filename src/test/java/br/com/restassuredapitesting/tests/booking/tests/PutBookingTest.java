@@ -4,6 +4,7 @@ import br.com.restassuredapitesting.base.BaseTest;
 import br.com.restassuredapitesting.suites.AcceptanceTests;
 import br.com.restassuredapitesting.suites.AllTests;
 import br.com.restassuredapitesting.suites.E2eTests;
+import br.com.restassuredapitesting.suites.SecurityTests;
 import br.com.restassuredapitesting.tests.auth.requests.PostAuthRequest;
 import br.com.restassuredapitesting.tests.booking.requests.GetBookingRequest;
 import br.com.restassuredapitesting.tests.booking.requests.PutBookingRequest;
@@ -44,7 +45,7 @@ public class PutBookingTest extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    @Category({AllTests.class, E2eTests.class})
+    @Category({AllTests.class, E2eTests.class, SecurityTests.class})
     @DisplayName("Tentar alterar uma reserva quando o token não for enviado")
     public void validarNaoAlteracaoDeUmaReservaSemEnviarToken() {
         putBookingRequest.updateBookingWithoutToken(primeiroId)
@@ -55,7 +56,7 @@ public class PutBookingTest extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    @Category({AllTests.class, E2eTests.class})
+    @Category({AllTests.class, E2eTests.class, SecurityTests.class})
     @DisplayName("Tentar alterar uma reserva quando o token enviado for inválido")
     public void validarNaoAlteracaoDeUmaReservaUtilizandoTokenInvalido() {
         String token = "token=tokenInvalido123";
