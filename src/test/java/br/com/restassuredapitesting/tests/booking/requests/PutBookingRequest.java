@@ -19,7 +19,20 @@ public class PutBookingRequest {
                 .header("Cookie", token)
                 .when()
                 .body(bookingPayLoads.payloadValidBooking().toString())
+                .log().all()
                 .put("booking/" + id); //método PUT
 
     }
+
+    public Response updateBookingWithoutToken(int id) {
+        return given()
+                .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
+//                .header("Cookie", token) --> O atributo "Cookie" não será enviado para o Header
+                .when()
+                .body(bookingPayLoads.payloadValidBooking().toString())
+                .log().all()
+                .put("booking/" + id); //método PUT
+    }
+
 }
