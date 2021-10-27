@@ -26,7 +26,7 @@ public class GetBookingRequest {
     public Response bookingReturnByFirstname(String firstname) {
         return given()
                 .when()
-//                .log().all()
+                .log().ifValidationFails()
                 .get("booking?firstname="+firstname);
     }
 
@@ -34,7 +34,7 @@ public class GetBookingRequest {
     public Response bookingReturnByLastname(String lastname) {
         return given()
                 .when()
-//                .log().all()
+                .log().ifValidationFails()
                 .get("booking?lastname="+lastname);
     }
 
@@ -42,23 +42,23 @@ public class GetBookingRequest {
     public Response bookingReturnByDate(String check, String date) {
         return given()
                 .when()
-                .log().all()
+                .log().ifValidationFails()
                 .get("booking?"+check+date);
     }
 
-    @Step("Retorna uma Listagem de Reservas utilizando os filtos 'checkin' e 'checkout'")
-    public Response bookingReturnByCheckinAndCheckout(String checkinDate, String checkoutDate) {
+    @Step("Retorna uma Listagem de Reservas utilizando o filtro 'checkout' duas vezes")
+    public Response bookingReturnByCheckoutAndCheckout(String checkoutDate) {
         return given()
                 .when()
-                .log().all()
-                .get("booking?checkin="+checkinDate+"&checkout="+checkoutDate);
+                .log().ifValidationFails()
+                .get("booking?checkout="+checkoutDate+"&checkout="+checkoutDate);
     }
 
     @Step("Retorna uma Listagem de Reservas utilizando os filtos 'firstname', 'checkin' e 'checkout'")
     public Response bookingReturnByFirstNameAndCheckinAndCheckout(String firstname, String checkinDate, String checkoutDate) {
         return given()
                 .when()
-                .log().all()
+                .log().ifValidationFails()
                 .get("booking?firstname="+firstname+"&checkin="+checkinDate+"&checkout="+checkoutDate);
     }
 

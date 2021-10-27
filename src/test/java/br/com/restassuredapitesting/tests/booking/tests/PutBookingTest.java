@@ -24,6 +24,9 @@ public class PutBookingTest extends BaseTest {
     GetBookingRequest getBookingRequest = new GetBookingRequest();
     PostAuthRequest postAuthRequest = new PostAuthRequest();
 
+    // Nesta Classe optei por não criar novas reservas nos testes, pois já foram criadas muitas na Classe
+    // GetBookingTest, sendo assim utilizei ID da primeira reserva da lista nos cenários de testes.
+
     int primeiroId = getBookingRequest.bookingReturnIds()
             .then()
             .statusCode(200)
@@ -50,7 +53,6 @@ public class PutBookingTest extends BaseTest {
     public void validarNaoAlteracaoDeUmaReservaSemEnviarToken() {
         putBookingRequest.updateBookingWithoutToken(primeiroId)
                 .then()
-                .log().all()
                 .statusCode(403);
     }
 
@@ -63,7 +65,6 @@ public class PutBookingTest extends BaseTest {
 
         putBookingRequest.updateBookingToken(primeiroId, token)
                 .then()
-                .log().all()
                 .statusCode(403);
     }
 
@@ -76,7 +77,6 @@ public class PutBookingTest extends BaseTest {
 
         putBookingRequest.updateBookingToken(id, postAuthRequest.getToken())
                 .then()
-                .log().all()
                 .statusCode(405);
     }
 }

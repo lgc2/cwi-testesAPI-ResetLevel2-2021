@@ -5,7 +5,9 @@ import br.com.restassuredapitesting.suites.AcceptanceTests;
 import br.com.restassuredapitesting.suites.AllTests;
 import br.com.restassuredapitesting.suites.ContractTests;
 import br.com.restassuredapitesting.suites.E2eTests;
+import br.com.restassuredapitesting.tests.booking.payloads.BookingPayLoads;
 import br.com.restassuredapitesting.tests.booking.requests.GetBookingRequest;
+import br.com.restassuredapitesting.tests.booking.requests.PostBookingRequest;
 import br.com.restassuredapitesting.utils.Utils;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
@@ -23,36 +25,43 @@ import static org.hamcrest.Matchers.greaterThan;
 public class GetBookingTest extends BaseTest{
 
     GetBookingRequest getBookingRequest = new GetBookingRequest();
+    PostBookingRequest postBookingRequest = new PostBookingRequest();
+    BookingPayLoads bookingPayLoads = new BookingPayLoads();
 
-    int segundoId = getBookingRequest.bookingReturnIds()
+    // Criando uma nova reserva e extraindo seu ID
+    int id = postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
             .then()
             .statusCode(200)
             .extract()
-            .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
+            .path("bookingid");
 
-    String firstname = getBookingRequest.specificBookingReturnId(segundoId)
+    // Criando uma nova reserva e extraindo atributo "firstname"
+    String firstname = postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
             .then()
             .statusCode(200)
             .extract()
-            .path("firstname"); // Extraindo firstname da segunda reserva
+            .path("booking.firstname");
 
-    String lastname = getBookingRequest.specificBookingReturnId(segundoId)
+    // Criando uma nova reserva e extraindo atributo "lastname"
+    String lastname = postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
             .then()
             .statusCode(200)
             .extract()
-            .path("lastname"); // Extraindo lastname da segunda reserva
+            .path("booking.lastname");
 
-    String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
+    // Criando uma nova reserva e extraindo atributo "checkin"
+    String chekin = postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
             .then()
             .statusCode(200)
             .extract()
-            .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
+            .path("booking.bookingdates.checkin"); // Extraindo data de checkin da reserva criada
 
-    String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
+    // Criando uma nova reserva e extraindo atributo "checkout"
+    String checkout = postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
             .then()
             .statusCode(200)
             .extract()
-            .path("bookingdates.checkout"); // Extraindo data de checkout da segunda reserva
+            .path("booking.bookingdates.checkout"); // Extraindo data de checkout da reserva criada
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
@@ -83,7 +92,7 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, ContractTests.class})
     @DisplayName("Garantir o Schema de retorno de um ID de reserva específico")
     public void validaSchemaDeUmaReservaEspecifica() {
-        getBookingRequest.specificBookingReturnId(segundoId)
+        getBookingRequest.specificBookingReturnId(id)
                 .then()
                 .statusCode(200)
                 .body(matchesJsonSchema(new File(Utils.getSchemaBasePath
@@ -95,7 +104,7 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar uma reserva específica através do ID")
     public void listaReservaEspecifica() {
-        getBookingRequest.specificBookingReturnId(segundoId)
+        getBookingRequest.specificBookingReturnId(id)
                 .then()
                 .statusCode(200)
                 .body("size()", greaterThan(0));
@@ -108,11 +117,11 @@ public class GetBookingTest extends BaseTest{
     public void validaListagemDeReservasPeloFiltroFirstname() {
         getBookingRequest.bookingReturnByFirstname(firstname)
                 .then()
-//                .log().all()
                 .statusCode(200)
+                .log().ifValidationFails()
                 .body("size()", greaterThan(0));
         // Neste caso a listagem tem que ser maior do que 0 porque, para pegar um "firstname" válido,
-        //optei por buscar um ID válido primeiramente, e extrair dele um nome existente.
+        //optei por criar uma nova reserva e extrair dela um nome existente.
     }
 
     @Test
@@ -122,8 +131,8 @@ public class GetBookingTest extends BaseTest{
     public void validaListagemDeReservasPeloFiltroLastname() {
         getBookingRequest.bookingReturnByLastname(lastname)
                 .then()
-//                .log().all()
                 .statusCode(200)
+                .log().ifValidationFails()
                 .body("size()", greaterThan(0));
         // Neste caso a listagem tem que ser maior do que 0 porque, para pegar um "lastname" válido,
         //optei por buscar um ID válido primeiramente, e extrair dele um sobrenome existente.
@@ -135,21 +144,16 @@ public class GetBookingTest extends BaseTest{
     @DisplayName("Listar reservas através do filtro 'checkin'")
     public void validaListagemDeReservasPeloFiltroCheckin() {
         String check = "checkin="; // Variável para concatenar 'checkin=' no path
-        String date = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
 
-        getBookingRequest.bookingReturnByDate(check, date)
+        getBookingRequest.bookingReturnByDate(check, chekin)
                 .then()
-                .log().all()
                 .statusCode(200)
+                .log().ifValidationFails()
                 .body("size()", greaterThan(0)); // Tem que ser > 0 pois peguei de uma reserva existente
 
         // Consta na documentação que, o filtro de datas deveria retornar reservas de mesma data para
         // frente, o que não está ocorrendo. A API com filtro checkin está retornando apenas reservas
-        // com datas posteriores a do filtro. No arquivo pdf isto é citado.
+        // com datas posteriores a do filtro. No arquivo README.md isto é citado.
     }
 
     @Test
@@ -158,36 +162,30 @@ public class GetBookingTest extends BaseTest{
     @DisplayName("Listar reservas através do filtro 'checkout'")
     public void validaListagemDeReservasPeloFiltroCheckout() {
         String check = "checkout="; // Variável para concatenar 'checkout=' no path
-        String date = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkout"); // Extraindo data de checkout da segunda reserva
 
-        getBookingRequest.bookingReturnByDate(check, date)
+        getBookingRequest.bookingReturnByDate(check, checkout)
                 .then()
-                .log().all()
                 .statusCode(200)
+                .log().ifValidationFails()
                 .body("size()", greaterThan(0)); // Tem que ser > 0 pois peguei de uma reserva existente
 
         // Consta na documentação que, o filtro de datas deveria retornar reservas de mesma data para
         // frente, o que não está ocorrendo. A API com filtro checkout está retornando reservas com datas anteriores
-        // ou iguais a do filtro. No arquivo pdf isto é citado.
+        // ou iguais a do filtro. No arquivo README.md isto é citado.
     }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
     @Category({AllTests.class, AcceptanceTests.class})
-    @DisplayName("Listar reservas através dos filtros 'chekin' e 'checkout'")
-    public void validaListagemDeReservasPelosFiltrosCheckinECheckout() {
-        getBookingRequest.bookingReturnByCheckinAndCheckout(checkinDate, checkoutDate)
+    @DisplayName("Listar reservas enviando o filtro 'checkout' duas vezes")
+    public void validaListagemDeReservasPeloFiltroCheckoutECheckout() {
+        getBookingRequest.bookingReturnByCheckoutAndCheckout(checkout)
                 .then()
-                .statusCode(200)
-                .log().all()
-                .body("size()", greaterThan(0)); // Deveria ser > 0 pois peguei de uma reserva existente
+                .statusCode(500)
+                .log().ifValidationFails();
 
-        // Existe um bug aqui pois está retornando um Array vazio, o que não deveria ocorrer já que peguei dados
-        // válidos de checkin e checkout de uma reserva existente (segundo ID de reservas).
+        // Não é aceito que o filtro "checkout" seja repetido duas vezes na Requisição, então a concatenação
+        // ...?checkout=AAAA-MM-DD&checkout=AAAA-MM-DD não ocorre, fica apenas assim: ...?checkout=2019-01-01.
     }
 
     @Test
@@ -195,10 +193,34 @@ public class GetBookingTest extends BaseTest{
     @Category({AllTests.class, AcceptanceTests.class})
     @DisplayName("Listar reservas através dos filtros 'firstname', 'chekin' e 'checkout'")
     public void validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout() {
+        int segundoId = getBookingRequest.bookingReturnIds()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("[1].bookingid"); // Extraindo ID do segundo elemento (segunda reserva)
+
+        String firstname = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("firstname"); // Extraindo firstname da segunda reserva
+
+        String checkinDate = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
+
+        String checkoutDate = getBookingRequest.specificBookingReturnId(segundoId)
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("bookingdates.checkout"); // Extraindo data de checkout da segunda reserva
+
         getBookingRequest.bookingReturnByFirstNameAndCheckinAndCheckout(firstname, checkinDate, checkoutDate)
                 .then()
                 .statusCode(200)
-                .log().all()
+                .log().ifValidationFails()
                 .body("size()", greaterThan(0)); // Deveria ser > 0 pois peguei de uma reserva existente
 
         // Existe um bug aqui pois está retornando um Array vazio, o que não deveria ocorrer já que peguei dados
@@ -211,18 +233,13 @@ public class GetBookingTest extends BaseTest{
     @DisplayName("Visualizar erro de servidor 500 quando enviar filtro mal formatado")
     public void validaErro500QuandoEnviarFiltroMalFormatado() {
         String check = "checkiiinnn="; // Variável escrita de maneira ERRADA para concatenar 'checkiiinnn=' no path
-        String date = getBookingRequest.specificBookingReturnId(segundoId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("bookingdates.checkin"); // Extraindo data de checkin da segunda reserva
 
-        getBookingRequest.bookingReturnByDate(check, date)
+        getBookingRequest.bookingReturnByDate(check, chekin)
                 .then()
-                .log().all()
+                .log().ifValidationFails()
                 .statusCode(500);
 
-        // Erroneamente a API está retornando a lista completa de todos os IDs de reservas e, status code 200,
+        // A API está retornando a lista completa de todos os IDs de reservas e, status code 200,
         // quando um filtro inválido é digitado. Está se comportando como se tivesse fornecido a URL:
         // https://treinamento-api.herokuapp.com/booking.
     }

@@ -1,20 +1,38 @@
 -------------------------------------------------------------------------------
 Test set: br.com.restassuredapitesting.runners.AllTests
 -------------------------------------------------------------------------------
-Tests run: 25, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 90.902 s <<< FAILURE! - in br.com.restassuredapitesting.runners.AllTests
-validaErro500QuandoEnviarFiltroMalFormatado(br.com.restassuredapitesting.tests.booking.tests.GetBookingTest)  Time elapsed: 2.036 s  <<< FAILURE!
+Tests run: 25, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 83.522 s <<< FAILURE! - in br.com.restassuredapitesting.runners.AllTests
+validaErro500QuandoEnviarFiltroMalFormatado(br.com.restassuredapitesting.tests.booking.tests.GetBookingTest)  Time elapsed: 0.933 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <500> but was <200>.
 
-	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaErro500QuandoEnviarFiltroMalFormatado(GetBookingTest.java:223)
+	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaErro500QuandoEnviarFiltroMalFormatado(GetBookingTest.java:240)
 
-validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout(br.com.restassuredapitesting.tests.booking.tests.GetBookingTest)  Time elapsed: 0.997 s  <<< FAILURE!
+validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout(br.com.restassuredapitesting.tests.booking.tests.GetBookingTest)  Time elapsed: 4.059 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
 Expected: a value greater than <0>
   Actual: 0
 
-	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout(GetBookingTest.java:202)
+	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout(GetBookingTest.java:224)
+
+validaListagemDeReservasPeloFiltroCheckin(br.com.restassuredapitesting.tests.booking.tests.GetBookingTest)  Time elapsed: 0.821 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: a value greater than <0>
+  Actual: 0
+
+	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaListagemDeReservasPeloFiltroCheckin(GetBookingTest.java:152)
+
+validarCriacaoDeUmaReservaComParametrosAdicionaisNoPayload(br.com.restassuredapitesting.tests.booking.tests.PostBookingTest)  Time elapsed: 0.832 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path nickname doesn't match.
+Expected: is "lgc2"
+  Actual: null
+
+	at br.com.restassuredapitesting.tests.booking.tests.PostBookingTest.validarCriacaoDeUmaReservaComParametrosAdicionaisNoPayload(PostBookingTest.java:69)
 

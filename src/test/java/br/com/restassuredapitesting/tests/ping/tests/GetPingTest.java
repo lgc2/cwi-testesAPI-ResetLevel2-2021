@@ -24,10 +24,8 @@ public class GetPingTest extends BaseTest{
 
         getPingRequest.pingReturnApi()
                 .then()
-                .statusCode(201); // Código obtido da documentação. Ideal seria código 200 --> ver arquivo pdf
-
+                .statusCode(201); // Código obtido da documentação. Ideal seria código 200 --> ver README.md
     }
-
 
 }
 

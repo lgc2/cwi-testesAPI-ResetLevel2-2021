@@ -15,7 +15,7 @@ public class PostBookingRequest {
                 .header("Accept", "application/json")
                 .when()
                 .body(payload.toString())
-                .log().all()
+                .log().ifValidationFails()
                 .post("booking"); // Método Post
     }
 
@@ -26,7 +26,6 @@ public class PostBookingRequest {
                 .header("Accept", "application") // Atributo "Accept" inválido, está faltando /json
                 .when()
                 .body(payload.toString())
-                .log().all()
                 .post("booking"); // Método Post
     }
 

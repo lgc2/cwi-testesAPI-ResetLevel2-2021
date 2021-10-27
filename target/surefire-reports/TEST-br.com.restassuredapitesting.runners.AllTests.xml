@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.com.restassuredapitesting.runners.AllTests" time="90.902" tests="25" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.com.restassuredapitesting.runners.AllTests" time="83.522" tests="25" errors="0" skipped="0" failures="4">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\cagiv\AppData\Local\Temp\surefire4094039383458129743\surefirebooter8778689968200135578.jar C:\Users\cagiv\AppData\Local\Temp\surefire4094039383458129743 2021-10-25T20-42-51_426-jvmRun1 surefire8922514791314993365tmp surefire_06157654515856230891tmp"/>
+    <property name="sun.java.command" value="C:\Users\cagiv\AppData\Local\Temp\surefire30616320149483223\surefirebooter343792977179143109.jar C:\Users\cagiv\AppData\Local\Temp\surefire30616320149483223 2021-10-27T17-13-12_430-jvmRun1 surefire7286522904812475106tmp surefire_03026070528864116039tmp"/>
     <property name="surefire.test.class.path" value="C:\dev\restassuredapitesting\target\test-classes;C:\dev\restassuredapitesting\target\classes;C:\Users\cagiv\.m2\repository\org\projectlombok\lombok\1.18.6\lombok-1.18.6.jar;C:\Users\cagiv\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\cagiv\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\cagiv\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\cagiv\.m2\repository\io\rest-assured\rest-assured\3.1.0\rest-assured-3.1.0.jar;C:\Users\cagiv\.m2\repository\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;C:\Users\cagiv\.m2\repository\org\codehaus\groovy\groovy-xml\2.4.12\groovy-xml-2.4.12.jar;C:\Users\cagiv\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\cagiv\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\cagiv\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\cagiv\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\cagiv\.m2\repository\org\apache\httpcomponents\httpmime\4.5.1\httpmime-4.5.1.jar;C:\Users\cagiv\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\cagiv\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\cagiv\.m2\repository\io\rest-assured\xml-path\3.1.0\xml-path-3.1.0.jar;C:\Users\cagiv\.m2\repository\javax\xml\bind\jaxb-api\2.2.12\jaxb-api-2.2.12.jar;C:\Users\cagiv\.m2\repository\io\rest-assured\json-schema-validator\3.1.0\json-schema-validator-3.1.0.jar;C:\Users\cagiv\.m2\repository\com\github\fge\json-schema-validator\2.2.6\json-schema-validator-2.2.6.jar;C:\Users\cagiv\.m2\repository\com\google\code\findbugs\jsr305\3.0.0\jsr305-3.0.0.jar;C:\Users\cagiv\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;C:\Users\cagiv\.m2\repository\com\googlecode\libphonenumber\libphonenumber\6.2\libphonenumber-6.2.jar;C:\Users\cagiv\.m2\repository\com\github\fge\json-schema-core\1.2.5\json-schema-core-1.2.5.jar;C:\Users\cagiv\.m2\repository\com\github\fge\uri-template\0.9\uri-template-0.9.jar;C:\Users\cagiv\.m2\repository\com\github\fge\msg-simple\1.1\msg-simple-1.1.jar;C:\Users\cagiv\.m2\repository\com\github\fge\btf\1.2\btf-1.2.jar;C:\Users\cagiv\.m2\repository\com\google\guava\guava\16.0.1\guava-16.0.1.jar;C:\Users\cagiv\.m2\repository\com\github\fge\jackson-coreutils\1.8\jackson-coreutils-1.8.jar;C:\Users\cagiv\.m2\repository\org\mozilla\rhino\1.7R4\rhino-1.7R4.jar;C:\Users\cagiv\.m2\repository\javax\mail\mailapi\1.4.3\mailapi-1.4.3.jar;C:\Users\cagiv\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\cagiv\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\cagiv\.m2\repository\com\github\javafaker\javafaker\1.0.1\javafaker-1.0.1.jar;C:\Users\cagiv\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\cagiv\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\cagiv\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\cagiv\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\cagiv\.m2\repository\io\rest-assured\json-path\3.1.0\json-path-3.1.0.jar;C:\Users\cagiv\.m2\repository\org\codehaus\groovy\groovy-json\2.4.12\groovy-json-2.4.12.jar;C:\Users\cagiv\.m2\repository\io\rest-assured\rest-assured-common\3.1.0\rest-assured-common-3.1.0.jar;C:\Users\cagiv\.m2\repository\io\qameta\allure\allure-junit4\2.9.0\allure-junit4-2.9.0.jar;C:\Users\cagiv\.m2\repository\io\qameta\allure\allure-java-commons\2.9.0\allure-java-commons-2.9.0.jar;C:\Users\cagiv\.m2\repository\io\qameta\allure\allure-model\2.9.0\allure-model-2.9.0.jar;C:\Users\cagiv\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.7\jackson-databind-2.9.7.jar;C:\Users\cagiv\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\cagiv\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.7\jackson-core-2.9.7.jar;C:\Users\cagiv\.m2\repository\org\apache\tika\tika-core\1.19.1\tika-core-1.19.1.jar;C:\Users\cagiv\.m2\repository\org\aspectj\aspectjrt\1.9.1\aspectjrt-1.9.1.jar;C:\Users\cagiv\.m2\repository\org\jooq\joor-java-8\0.9.9\joor-java-8-0.9.9.jar;C:\Users\cagiv\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\cagiv\.m2\repository\org\slf4j\slf4j-jdk14\1.7.26\slf4j-jdk14-1.7.26.jar;C:\Users\cagiv\.m2\repository\org\json\json\20190722\json-20190722.jar;"/>
     <property name="test" value="AllTests"/>
     <property name="allure.results.directory" value="C:\dev\restassuredapitesting\target/allure-results"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\cagiv\AppData\Local\Temp\surefire4094039383458129743\surefirebooter8778689968200135578.jar;C:\Users\cagiv\.m2\repository/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\cagiv\AppData\Local\Temp\surefire30616320149483223\surefirebooter343792977179143109.jar;C:\Users\cagiv\.m2\repository/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -63,16 +63,16 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="validaApiOnline" classname="br.com.restassuredapitesting.tests.ping.tests.GetPingTest" time="2.592"/>
-  <testcase name="validaErro500QuandoEnviarFiltroMalFormatado" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="2.036">
+  <testcase name="validaApiOnline" classname="br.com.restassuredapitesting.tests.ping.tests.GetPingTest" time="2.716"/>
+  <testcase name="validaErro500QuandoEnviarFiltroMalFormatado" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.933">
     <failure message="1 expectation failed.&#10;Expected status code &lt;500&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <500> but was <200>.
 
-	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaErro500QuandoEnviarFiltroMalFormatado(GetBookingTest.java:223)
+	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaErro500QuandoEnviarFiltroMalFormatado(GetBookingTest.java:240)
 ]]></failure>
     <system-out><![CDATA[Request method:	GET
-Request URI:	https://treinamento-api.herokuapp.com/booking?checkiiinnn=2021-10-25
+Request URI:	https://treinamento-api.herokuapp.com/booking?checkiiinnn=2021-10-10
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -82,1528 +82,941 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+
 HTTP/1.1 200 OK
 Server: Cowboy
 Connection: keep-alive
 X-Powered-By: Express
 Content-Type: application/json; charset=utf-8
-Content-Length: 9267
-Etag: W/"2433-Uzyr2PpB7ltujfFhxH6S/2l0ZM0"
-Date: Mon, 25 Oct 2021 23:43:03 GMT
+Content-Length: 9785
+Etag: W/"2639-DnVluKhveTauCDJ1b7e2a0v/NT0"
+Date: Wed, 27 Oct 2021 20:13:22 GMT
 Via: 1.1 vegur
 
 [
     {
-        "bookingid": 332
-    },
-    {
-        "bookingid": 267
-    },
-    {
-        "bookingid": 490
-    },
-    {
-        "bookingid": 359
-    },
-    {
-        "bookingid": 523
-    },
-    {
-        "bookingid": 317
-    },
-    {
-        "bookingid": 228
-    },
-    {
-        "bookingid": 216
-    },
-    {
-        "bookingid": 232
-    },
-    {
-        "bookingid": 129
-    },
-    {
-        "bookingid": 254
-    },
-    {
-        "bookingid": 95
-    },
-    {
-        "bookingid": 113
-    },
-    {
-        "bookingid": 442
-    },
-    {
-        "bookingid": 346
-    },
-    {
-        "bookingid": 421
-    },
-    {
-        "bookingid": 463
-    },
-    {
-        "bookingid": 77
-    },
-    {
-        "bookingid": 455
-    },
-    {
-        "bookingid": 318
-    },
-    {
-        "bookingid": 542
-    },
-    {
-        "bookingid": 70
-    },
-    {
-        "bookingid": 256
-    },
-    {
-        "bookingid": 471
-    },
-    {
-        "bookingid": 215
-    },
-    {
-        "bookingid": 226
-    },
-    {
-        "bookingid": 382
-    },
-    {
-        "bookingid": 48
-    },
-    {
-        "bookingid": 293
-    },
-    {
-        "bookingid": 89
-    },
-    {
-        "bookingid": 160
-    },
-    {
-        "bookingid": 147
-    },
-    {
-        "bookingid": 241
-    },
-    {
-        "bookingid": 301
-    },
-    {
-        "bookingid": 327
-    },
-    {
-        "bookingid": 107
-    },
-    {
-        "bookingid": 580
-    },
-    {
-        "bookingid": 337
-    },
-    {
-        "bookingid": 482
-    },
-    {
-        "bookingid": 19
-    },
-    {
-        "bookingid": 214
-    },
-    {
-        "bookingid": 227
-    },
-    {
-        "bookingid": 162
-    },
-    {
-        "bookingid": 221
-    },
-    {
-        "bookingid": 141
-    },
-    {
-        "bookingid": 212
-    },
-    {
-        "bookingid": 300
-    },
-    {
-        "bookingid": 234
-    },
-    {
-        "bookingid": 33
-    },
-    {
-        "bookingid": 91
-    },
-    {
-        "bookingid": 50
-    },
-    {
-        "bookingid": 559
-    },
-    {
-        "bookingid": 104
-    },
-    {
-        "bookingid": 345
-    },
-    {
-        "bookingid": 481
-    },
-    {
-        "bookingid": 60
-    },
-    {
-        "bookingid": 396
-    },
-    {
-        "bookingid": 245
-    },
-    {
-        "bookingid": 93
-    },
-    {
-        "bookingid": 357
-    },
-    {
-        "bookingid": 235
-    },
-    {
-        "bookingid": 575
-    },
-    {
-        "bookingid": 120
-    },
-    {
-        "bookingid": 184
-    },
-    {
-        "bookingid": 347
-    },
-    {
-        "bookingid": 272
-    },
-    {
-        "bookingid": 503
-    },
-    {
-        "bookingid": 513
-    },
-    {
-        "bookingid": 578
-    },
-    {
-        "bookingid": 163
-    },
-    {
-        "bookingid": 488
-    },
-    {
-        "bookingid": 460
-    },
-    {
-        "bookingid": 298
-    },
-    {
-        "bookingid": 363
-    },
-    {
-        "bookingid": 501
-    },
-    {
-        "bookingid": 325
-    },
-    {
-        "bookingid": 362
-    },
-    {
-        "bookingid": 577
-    },
-    {
-        "bookingid": 353
-    },
-    {
-        "bookingid": 378
-    },
-    {
-        "bookingid": 445
-    },
-    {
-        "bookingid": 391
-    },
-    {
-        "bookingid": 307
-    },
-    {
-        "bookingid": 394
-    },
-    {
-        "bookingid": 344
-    },
-    {
-        "bookingid": 388
-    },
-    {
-        "bookingid": 248
-    },
-    {
-        "bookingid": 168
-    },
-    {
-        "bookingid": 43
-    },
-    {
-        "bookingid": 306
-    },
-    {
-        "bookingid": 386
-    },
-    {
-        "bookingid": 59
-    },
-    {
-        "bookingid": 149
-    },
-    {
-        "bookingid": 486
-    },
-    {
-        "bookingid": 422
-    },
-    {
-        "bookingid": 153
-    },
-    {
-        "bookingid": 409
-    },
-    {
-        "bookingid": 579
-    },
-    {
-        "bookingid": 372
-    },
-    {
-        "bookingid": 108
-    },
-    {
-        "bookingid": 101
-    },
-    {
-        "bookingid": 297
-    },
-    {
-        "bookingid": 437
-    },
-    {
-        "bookingid": 364
-    },
-    {
-        "bookingid": 41
-    },
-    {
-        "bookingid": 557
-    },
-    {
-        "bookingid": 73
-    },
-    {
-        "bookingid": 166
-    },
-    {
-        "bookingid": 465
-    },
-    {
-        "bookingid": 466
-    },
-    {
-        "bookingid": 366
-    },
-    {
-        "bookingid": 173
-    },
-    {
-        "bookingid": 440
-    },
-    {
-        "bookingid": 128
-    },
-    {
-        "bookingid": 210
-    },
-    {
-        "bookingid": 536
-    },
-    {
-        "bookingid": 547
-    },
-    {
-        "bookingid": 519
-    },
-    {
-        "bookingid": 419
-    },
-    {
-        "bookingid": 555
-    },
-    {
-        "bookingid": 57
-    },
-    {
-        "bookingid": 436
-    },
-    {
-        "bookingid": 544
-    },
-    {
-        "bookingid": 552
-    },
-    {
-        "bookingid": 478
-    },
-    {
-        "bookingid": 355
-    },
-    {
-        "bookingid": 483
-    },
-    {
-        "bookingid": 438
-    },
-    {
-        "bookingid": 415
-    },
-    {
-        "bookingid": 397
-    },
-    {
-        "bookingid": 408
-    },
-    {
-        "bookingid": 71
-    },
-    {
-        "bookingid": 218
-    },
-    {
-        "bookingid": 453
-    },
-    {
-        "bookingid": 444
-    },
-    {
-        "bookingid": 44
-    },
-    {
-        "bookingid": 476
-    },
-    {
-        "bookingid": 412
-    },
-    {
-        "bookingid": 36
-    },
-    {
-        "bookingid": 132
-    },
-    {
-        "bookingid": 403
-    },
-    {
-        "bookingid": 192
-    },
-    {
-        "bookingid": 81
-    },
-    {
-        "bookingid": 21
-    },
-    {
-        "bookingid": 518
-    },
-    {
-        "bookingid": 414
-    },
-    {
-        "bookingid": 58
-    },
-    {
-        "bookingid": 40
-    },
-    {
-        "bookingid": 186
-    },
-    {
-        "bookingid": 334
-    },
-    {
-        "bookingid": 299
-    },
-    {
-        "bookingid": 340
-    },
-    {
-        "bookingid": 350
-    },
-    {
-        "bookingid": 138
-    },
-    {
-        "bookingid": 236
-    },
-    {
-        "bookingid": 98
-    },
-    {
-        "bookingid": 29
-    },
-    {
-        "bookingid": 154
-    },
-    {
-        "bookingid": 402
-    },
-    {
-        "bookingid": 401
-    },
-    {
-        "bookingid": 136
-    },
-    {
-        "bookingid": 424
-    },
-    {
-        "bookingid": 315
-    },
-    {
-        "bookingid": 261
-    },
-    {
-        "bookingid": 28
-    },
-    {
-        "bookingid": 310
-    },
-    {
-        "bookingid": 49
-    },
-    {
-        "bookingid": 247
-    },
-    {
-        "bookingid": 420
-    },
-    {
-        "bookingid": 275
-    },
-    {
-        "bookingid": 79
-    },
-    {
-        "bookingid": 206
-    },
-    {
-        "bookingid": 413
-    },
-    {
-        "bookingid": 86
-    },
-    {
-        "bookingid": 390
-    },
-    {
-        "bookingid": 302
-    },
-    {
-        "bookingid": 289
-    },
-    {
-        "bookingid": 47
-    },
-    {
-        "bookingid": 282
-    },
-    {
-        "bookingid": 117
-    },
-    {
-        "bookingid": 279
-    },
-    {
-        "bookingid": 69
-    },
-    {
-        "bookingid": 223
-    },
-    {
-        "bookingid": 352
-    },
-    {
-        "bookingid": 144
-    },
-    {
-        "bookingid": 574
-    },
-    {
-        "bookingid": 581
-    },
-    {
-        "bookingid": 502
-    },
-    {
-        "bookingid": 196
-    },
-    {
-        "bookingid": 285
-    },
-    {
-        "bookingid": 479
-    },
-    {
-        "bookingid": 461
-    },
-    {
-        "bookingid": 560
-    },
-    {
-        "bookingid": 467
-    },
-    {
-        "bookingid": 283
-    },
-    {
-        "bookingid": 121
-    },
-    {
-        "bookingid": 508
-    },
-    {
-        "bookingid": 135
-    },
-    {
-        "bookingid": 217
-    },
-    {
-        "bookingid": 305
-    },
-    {
-        "bookingid": 561
-    },
-    {
-        "bookingid": 375
-    },
-    {
-        "bookingid": 452
-    },
-    {
-        "bookingid": 485
-    },
-    {
-        "bookingid": 229
-    },
-    {
-        "bookingid": 354
-    },
-    {
-        "bookingid": 110
-    },
-    {
-        "bookingid": 404
-    },
-    {
-        "bookingid": 209
-    },
-    {
-        "bookingid": 351
-    },
-    {
-        "bookingid": 103
-    },
-    {
-        "bookingid": 105
-    },
-    {
-        "bookingid": 100
-    },
-    {
-        "bookingid": 464
-    },
-    {
-        "bookingid": 278
-    },
-    {
-        "bookingid": 158
-    },
-    {
-        "bookingid": 525
-    },
-    {
-        "bookingid": 441
-    },
-    {
-        "bookingid": 178
-    },
-    {
-        "bookingid": 374
-    },
-    {
-        "bookingid": 333
-    },
-    {
-        "bookingid": 96
-    },
-    {
-        "bookingid": 24
-    },
-    {
-        "bookingid": 165
-    },
-    {
-        "bookingid": 545
-    },
-    {
-        "bookingid": 569
-    },
-    {
-        "bookingid": 418
-    },
-    {
-        "bookingid": 139
-    },
-    {
-        "bookingid": 399
-    },
-    {
-        "bookingid": 480
-    },
-    {
-        "bookingid": 277
-    },
-    {
-        "bookingid": 185
-    },
-    {
-        "bookingid": 383
-    },
-    {
-        "bookingid": 211
-    },
-    {
-        "bookingid": 389
-    },
-    {
-        "bookingid": 294
-    },
-    {
-        "bookingid": 83
-    },
-    {
-        "bookingid": 497
-    },
-    {
-        "bookingid": 500
-    },
-    {
-        "bookingid": 246
-    },
-    {
-        "bookingid": 143
-    },
-    {
-        "bookingid": 200
-    },
-    {
-        "bookingid": 443
-    },
-    {
-        "bookingid": 260
-    },
-    {
-        "bookingid": 92
-    },
-    {
-        "bookingid": 222
-    },
-    {
-        "bookingid": 20
-    },
-    {
-        "bookingid": 187
-    },
-    {
-        "bookingid": 477
-    },
-    {
-        "bookingid": 377
-    },
-    {
-        "bookingid": 39
-    },
-    {
-        "bookingid": 368
-    },
-    {
-        "bookingid": 242
-    },
-    {
-        "bookingid": 400
-    },
-    {
-        "bookingid": 538
-    },
-    {
-        "bookingid": 84
-    },
-    {
-        "bookingid": 274
-    },
-    {
-        "bookingid": 198
-    },
-    {
-        "bookingid": 329
-    },
-    {
-        "bookingid": 448
-    },
-    {
-        "bookingid": 356
-    },
-    {
-        "bookingid": 564
-    },
-    {
-        "bookingid": 417
-    },
-    {
-        "bookingid": 470
-    },
-    {
-        "bookingid": 510
-    },
-    {
-        "bookingid": 512
-    },
-    {
-        "bookingid": 9
-    },
-    {
-        "bookingid": 474
-    },
-    {
-        "bookingid": 504
-    },
-    {
-        "bookingid": 164
-    },
-    {
-        "bookingid": 193
-    },
-    {
-        "bookingid": 495
-    },
-    {
-        "bookingid": 116
-    },
-    {
-        "bookingid": 517
-    },
-    {
-        "bookingid": 72
-    },
-    {
-        "bookingid": 540
-    },
-    {
-        "bookingid": 288
-    },
-    {
-        "bookingid": 428
-    },
-    {
-        "bookingid": 257
-    },
-    {
-        "bookingid": 78
-    },
-    {
-        "bookingid": 505
-    },
-    {
-        "bookingid": 62
-    },
-    {
-        "bookingid": 313
-    },
-    {
-        "bookingid": 321
-    },
-    {
-        "bookingid": 358
-    },
-    {
-        "bookingid": 281
-    },
-    {
         "bookingid": 563
     },
     {
-        "bookingid": 199
+        "bookingid": 622
     },
     {
-        "bookingid": 224
-    },
-    {
-        "bookingid": 371
-    },
-    {
-        "bookingid": 66
-    },
-    {
-        "bookingid": 549
-    },
-    {
-        "bookingid": 468
-    },
-    {
-        "bookingid": 152
-    },
-    {
-        "bookingid": 258
-    },
-    {
-        "bookingid": 262
-    },
-    {
-        "bookingid": 324
-    },
-    {
-        "bookingid": 183
-    },
-    {
-        "bookingid": 31
-    },
-    {
-        "bookingid": 170
-    },
-    {
-        "bookingid": 239
-    },
-    {
-        "bookingid": 18
-    },
-    {
-        "bookingid": 157
-    },
-    {
-        "bookingid": 533
-    },
-    {
-        "bookingid": 450
-    },
-    {
-        "bookingid": 181
-    },
-    {
-        "bookingid": 197
-    },
-    {
-        "bookingid": 12
-    },
-    {
-        "bookingid": 291
-    },
-    {
-        "bookingid": 276
-    },
-    {
-        "bookingid": 172
-    },
-    {
-        "bookingid": 180
-    },
-    {
-        "bookingid": 140
-    },
-    {
-        "bookingid": 398
-    },
-    {
-        "bookingid": 473
-    },
-    {
-        "bookingid": 15
-    },
-    {
-        "bookingid": 296
-    },
-    {
-        "bookingid": 405
-    },
-    {
-        "bookingid": 88
-    },
-    {
-        "bookingid": 37
-    },
-    {
-        "bookingid": 572
-    },
-    {
-        "bookingid": 392
-    },
-    {
-        "bookingid": 65
-    },
-    {
-        "bookingid": 156
-    },
-    {
-        "bookingid": 34
-    },
-    {
-        "bookingid": 308
-    },
-    {
-        "bookingid": 230
-    },
-    {
-        "bookingid": 553
-    },
-    {
-        "bookingid": 25
-    },
-    {
-        "bookingid": 376
-    },
-    {
-        "bookingid": 410
-    },
-    {
-        "bookingid": 244
-    },
-    {
-        "bookingid": 429
-    },
-    {
-        "bookingid": 384
-    },
-    {
-        "bookingid": 426
-    },
-    {
-        "bookingid": 343
-    },
-    {
-        "bookingid": 556
-    },
-    {
-        "bookingid": 528
-    },
-    {
-        "bookingid": 454
-    },
-    {
-        "bookingid": 304
-    },
-    {
-        "bookingid": 434
-    },
-    {
-        "bookingid": 264
-    },
-    {
-        "bookingid": 167
-    },
-    {
-        "bookingid": 427
-    },
-    {
-        "bookingid": 195
-    },
-    {
-        "bookingid": 498
-    },
-    {
-        "bookingid": 314
-    },
-    {
-        "bookingid": 554
-    },
-    {
-        "bookingid": 219
-    },
-    {
-        "bookingid": 146
-    },
-    {
-        "bookingid": 126
-    },
-    {
-        "bookingid": 220
-    },
-    {
-        "bookingid": 94
-    },
-    {
-        "bookingid": 349
-    },
-    {
-        "bookingid": 266
+        "bookingid": 592
     },
     {
         "bookingid": 550
     },
     {
-        "bookingid": 137
+        "bookingid": 611
     },
     {
-        "bookingid": 109
+        "bookingid": 617
     },
     {
-        "bookingid": 263
+        "bookingid": 583
     },
     {
-        "bookingid": 319
+        "bookingid": 569
     },
     {
-        "bookingid": 411
+        "bookingid": 585
     },
     {
-        "bookingid": 431
+        "bookingid": 488
     },
     {
-        "bookingid": 331
+        "bookingid": 442
     },
     {
-        "bookingid": 451
+        "bookingid": 512
     },
     {
-        "bookingid": 527
+        "bookingid": 337
     },
     {
-        "bookingid": 114
+        "bookingid": 324
     },
     {
-        "bookingid": 240
-    },
-    {
-        "bookingid": 231
-    },
-    {
-        "bookingid": 562
-    },
-    {
-        "bookingid": 130
-    },
-    {
-        "bookingid": 250
-    },
-    {
-        "bookingid": 201
-    },
-    {
-        "bookingid": 131
-    },
-    {
-        "bookingid": 284
-    },
-    {
-        "bookingid": 539
-    },
-    {
-        "bookingid": 252
-    },
-    {
-        "bookingid": 487
-    },
-    {
-        "bookingid": 458
-    },
-    {
-        "bookingid": 292
-    },
-    {
-        "bookingid": 492
-    },
-    {
-        "bookingid": 280
-    },
-    {
-        "bookingid": 202
-    },
-    {
-        "bookingid": 338
-    },
-    {
-        "bookingid": 27
-    },
-    {
-        "bookingid": 74
-    },
-    {
-        "bookingid": 475
-    },
-    {
-        "bookingid": 537
-    },
-    {
-        "bookingid": 551
+        "bookingid": 139
     },
     {
         "bookingid": 303
     },
     {
-        "bookingid": 524
+        "bookingid": 196
     },
     {
-        "bookingid": 406
-    },
-    {
-        "bookingid": 568
-    },
-    {
-        "bookingid": 68
-    },
-    {
-        "bookingid": 369
-    },
-    {
-        "bookingid": 213
-    },
-    {
-        "bookingid": 194
-    },
-    {
-        "bookingid": 11
-    },
-    {
-        "bookingid": 150
-    },
-    {
-        "bookingid": 462
-    },
-    {
-        "bookingid": 265
-    },
-    {
-        "bookingid": 169
-    },
-    {
-        "bookingid": 457
-    },
-    {
-        "bookingid": 531
-    },
-    {
-        "bookingid": 171
-    },
-    {
-        "bookingid": 290
-    },
-    {
-        "bookingid": 64
-    },
-    {
-        "bookingid": 507
-    },
-    {
-        "bookingid": 573
-    },
-    {
-        "bookingid": 208
-    },
-    {
-        "bookingid": 233
-    },
-    {
-        "bookingid": 273
-    },
-    {
-        "bookingid": 496
-    },
-    {
-        "bookingid": 491
-    },
-    {
-        "bookingid": 322
-    },
-    {
-        "bookingid": 255
-    },
-    {
-        "bookingid": 225
-    },
-    {
-        "bookingid": 336
+        "bookingid": 340
     },
     {
         "bookingid": 243
     },
     {
-        "bookingid": 558
+        "bookingid": 292
     },
     {
-        "bookingid": 269
+        "bookingid": 369
     },
     {
-        "bookingid": 151
+        "bookingid": 502
     },
     {
-        "bookingid": 571
+        "bookingid": 280
     },
     {
-        "bookingid": 312
+        "bookingid": 507
     },
     {
-        "bookingid": 159
+        "bookingid": 291
     },
     {
-        "bookingid": 423
-    },
-    {
-        "bookingid": 546
-    },
-    {
-        "bookingid": 469
-    },
-    {
-        "bookingid": 287
-    },
-    {
-        "bookingid": 268
-    },
-    {
-        "bookingid": 576
-    },
-    {
-        "bookingid": 387
-    },
-    {
-        "bookingid": 175
-    },
-    {
-        "bookingid": 203
-    },
-    {
-        "bookingid": 176
-    },
-    {
-        "bookingid": 472
+        "bookingid": 241
     },
     {
         "bookingid": 148
     },
     {
-        "bookingid": 320
+        "bookingid": 156
     },
     {
-        "bookingid": 341
+        "bookingid": 141
     },
     {
-        "bookingid": 380
+        "bookingid": 623
     },
     {
-        "bookingid": 251
+        "bookingid": 302
     },
     {
-        "bookingid": 102
+        "bookingid": 296
     },
     {
-        "bookingid": 112
+        "bookingid": 234
     },
     {
-        "bookingid": 509
+        "bookingid": 152
     },
     {
-        "bookingid": 330
+        "bookingid": 546
     },
     {
-        "bookingid": 309
-    },
-    {
-        "bookingid": 360
-    },
-    {
-        "bookingid": 511
-    },
-    {
-        "bookingid": 177
-    },
-    {
-        "bookingid": 75
-    },
-    {
-        "bookingid": 38
-    },
-    {
-        "bookingid": 449
+        "bookingid": 171
     },
     {
         "bookingid": 339
     },
     {
-        "bookingid": 506
-    },
-    {
-        "bookingid": 188
-    },
-    {
-        "bookingid": 286
-    },
-    {
-        "bookingid": 61
-    },
-    {
-        "bookingid": 522
-    },
-    {
-        "bookingid": 456
-    },
-    {
-        "bookingid": 271
-    },
-    {
-        "bookingid": 529
-    },
-    {
-        "bookingid": 323
-    },
-    {
-        "bookingid": 30
-    },
-    {
-        "bookingid": 80
-    },
-    {
-        "bookingid": 582
-    },
-    {
-        "bookingid": 134
-    },
-    {
-        "bookingid": 174
-    },
-    {
-        "bookingid": 541
-    },
-    {
-        "bookingid": 526
-    },
-    {
-        "bookingid": 259
-    },
-    {
-        "bookingid": 295
-    },
-    {
-        "bookingid": 373
-    },
-    {
-        "bookingid": 119
-    },
-    {
-        "bookingid": 207
-    },
-    {
-        "bookingid": 381
-    },
-    {
-        "bookingid": 53
-    },
-    {
-        "bookingid": 342
-    },
-    {
-        "bookingid": 489
-    },
-    {
-        "bookingid": 127
+        "bookingid": 547
     },
     {
         "bookingid": 370
     },
     {
-        "bookingid": 494
+        "bookingid": 128
     },
     {
-        "bookingid": 45
+        "bookingid": 203
+    },
+    {
+        "bookingid": 58
+    },
+    {
+        "bookingid": 263
+    },
+    {
+        "bookingid": 564
+    },
+    {
+        "bookingid": 624
+    },
+    {
+        "bookingid": 230
+    },
+    {
+        "bookingid": 142
+    },
+    {
+        "bookingid": 311
+    },
+    {
+        "bookingid": 143
+    },
+    {
+        "bookingid": 100
+    },
+    {
+        "bookingid": 118
+    },
+    {
+        "bookingid": 490
+    },
+    {
+        "bookingid": 229
+    },
+    {
+        "bookingid": 246
+    },
+    {
+        "bookingid": 306
+    },
+    {
+        "bookingid": 414
+    },
+    {
+        "bookingid": 478
+    },
+    {
+        "bookingid": 499
+    },
+    {
+        "bookingid": 398
+    },
+    {
+        "bookingid": 429
+    },
+    {
+        "bookingid": 399
+    },
+    {
+        "bookingid": 409
+    },
+    {
+        "bookingid": 423
+    },
+    {
+        "bookingid": 381
+    },
+    {
+        "bookingid": 223
+    },
+    {
+        "bookingid": 492
+    },
+    {
+        "bookingid": 107
+    },
+    {
+        "bookingid": 186
+    },
+    {
+        "bookingid": 505
+    },
+    {
+        "bookingid": 395
+    },
+    {
+        "bookingid": 458
+    },
+    {
+        "bookingid": 448
+    },
+    {
+        "bookingid": 437
+    },
+    {
+        "bookingid": 3
+    },
+    {
+        "bookingid": 301
+    },
+    {
+        "bookingid": 19
+    },
+    {
+        "bookingid": 371
+    },
+    {
+        "bookingid": 560
+    },
+    {
+        "bookingid": 418
+    },
+    {
+        "bookingid": 424
+    },
+    {
+        "bookingid": 561
+    },
+    {
+        "bookingid": 545
+    },
+    {
+        "bookingid": 450
+    },
+    {
+        "bookingid": 475
+    },
+    {
+        "bookingid": 610
+    },
+    {
+        "bookingid": 503
+    },
+    {
+        "bookingid": 134
+    },
+    {
+        "bookingid": 166
+    },
+    {
+        "bookingid": 313
+    },
+    {
+        "bookingid": 552
+    },
+    {
+        "bookingid": 338
+    },
+    {
+        "bookingid": 61
+    },
+    {
+        "bookingid": 587
+    },
+    {
+        "bookingid": 593
+    },
+    {
+        "bookingid": 228
+    },
+    {
+        "bookingid": 238
+    },
+    {
+        "bookingid": 174
+    },
+    {
+        "bookingid": 146
+    },
+    {
+        "bookingid": 511
+    },
+    {
+        "bookingid": 586
+    },
+    {
+        "bookingid": 620
+    },
+    {
+        "bookingid": 149
+    },
+    {
+        "bookingid": 526
+    },
+    {
+        "bookingid": 501
+    },
+    {
+        "bookingid": 70
+    },
+    {
+        "bookingid": 120
+    },
+    {
+        "bookingid": 97
     },
     {
         "bookingid": 514
     },
     {
+        "bookingid": 131
+    },
+    {
+        "bookingid": 125
+    },
+    {
+        "bookingid": 119
+    },
+    {
+        "bookingid": 520
+    },
+    {
+        "bookingid": 326
+    },
+    {
+        "bookingid": 89
+    },
+    {
+        "bookingid": 310
+    },
+    {
+        "bookingid": 431
+    },
+    {
+        "bookingid": 557
+    },
+    {
+        "bookingid": 268
+    },
+    {
+        "bookingid": 72
+    },
+    {
+        "bookingid": 575
+    },
+    {
+        "bookingid": 96
+    },
+    {
+        "bookingid": 200
+    },
+    {
+        "bookingid": 462
+    },
+    {
+        "bookingid": 528
+    },
+    {
+        "bookingid": 334
+    },
+    {
+        "bookingid": 353
+    },
+    {
+        "bookingid": 457
+    },
+    {
+        "bookingid": 78
+    },
+    {
+        "bookingid": 357
+    },
+    {
+        "bookingid": 367
+    },
+    {
+        "bookingid": 417
+    },
+    {
+        "bookingid": 527
+    },
+    {
+        "bookingid": 435
+    },
+    {
+        "bookingid": 309
+    },
+    {
+        "bookingid": 344
+    },
+    {
+        "bookingid": 380
+    },
+    {
+        "bookingid": 154
+    },
+    {
+        "bookingid": 158
+    },
+    {
+        "bookingid": 114
+    },
+    {
+        "bookingid": 508
+    },
+    {
+        "bookingid": 618
+    },
+    {
+        "bookingid": 257
+    },
+    {
+        "bookingid": 129
+    },
+    {
+        "bookingid": 615
+    },
+    {
+        "bookingid": 314
+    },
+    {
+        "bookingid": 236
+    },
+    {
+        "bookingid": 9
+    },
+    {
+        "bookingid": 155
+    },
+    {
+        "bookingid": 533
+    },
+    {
+        "bookingid": 609
+    },
+    {
+        "bookingid": 349
+    },
+    {
+        "bookingid": 80
+    },
+    {
+        "bookingid": 88
+    },
+    {
+        "bookingid": 251
+    },
+    {
+        "bookingid": 7
+    },
+    {
+        "bookingid": 513
+    },
+    {
+        "bookingid": 117
+    },
+    {
+        "bookingid": 188
+    },
+    {
+        "bookingid": 121
+    },
+    {
+        "bookingid": 227
+    },
+    {
+        "bookingid": 391
+    },
+    {
         "bookingid": 46
     },
     {
-        "bookingid": 253
+        "bookingid": 290
     },
     {
-        "bookingid": 13
+        "bookingid": 26
     },
     {
-        "bookingid": 205
+        "bookingid": 556
     },
     {
-        "bookingid": 35
+        "bookingid": 591
     },
     {
-        "bookingid": 191
+        "bookingid": 24
     },
     {
-        "bookingid": 16
+        "bookingid": 130
     },
     {
-        "bookingid": 182
+        "bookingid": 79
     },
     {
-        "bookingid": 316
+        "bookingid": 245
     },
     {
-        "bookingid": 10
+        "bookingid": 237
     },
     {
-        "bookingid": 328
+        "bookingid": 75
     },
     {
-        "bookingid": 515
+        "bookingid": 242
     },
     {
-        "bookingid": 82
+        "bookingid": 47
+    },
+    {
+        "bookingid": 192
+    },
+    {
+        "bookingid": 124
+    },
+    {
+        "bookingid": 176
+    },
+    {
+        "bookingid": 244
+    },
+    {
+        "bookingid": 99
+    },
+    {
+        "bookingid": 122
+    },
+    {
+        "bookingid": 6
+    },
+    {
+        "bookingid": 252
+    },
+    {
+        "bookingid": 67
+    },
+    {
+        "bookingid": 443
+    },
+    {
+        "bookingid": 320
+    },
+    {
+        "bookingid": 621
+    },
+    {
+        "bookingid": 304
+    },
+    {
+        "bookingid": 93
+    },
+    {
+        "bookingid": 135
+    },
+    {
+        "bookingid": 325
+    },
+    {
+        "bookingid": 400
+    },
+    {
+        "bookingid": 45
+    },
+    {
+        "bookingid": 459
+    },
+    {
+        "bookingid": 375
+    },
+    {
+        "bookingid": 600
+    },
+    {
+        "bookingid": 332
+    },
+    {
+        "bookingid": 271
+    },
+    {
+        "bookingid": 498
+    },
+    {
+        "bookingid": 589
+    },
+    {
+        "bookingid": 465
+    },
+    {
+        "bookingid": 469
+    },
+    {
+        "bookingid": 412
+    },
+    {
+        "bookingid": 25
+    },
+    {
+        "bookingid": 406
+    },
+    {
+        "bookingid": 85
+    },
+    {
+        "bookingid": 333
+    },
+    {
+        "bookingid": 538
+    },
+    {
+        "bookingid": 293
+    },
+    {
+        "bookingid": 101
     },
     {
         "bookingid": 432
     },
     {
-        "bookingid": 570
+        "bookingid": 588
     },
     {
-        "bookingid": 379
+        "bookingid": 626
     },
     {
-        "bookingid": 430
+        "bookingid": 60
     },
     {
-        "bookingid": 270
+        "bookingid": 565
     },
     {
-        "bookingid": 535
+        "bookingid": 180
     },
     {
-        "bookingid": 87
+        "bookingid": 554
+    },
+    {
+        "bookingid": 602
+    },
+    {
+        "bookingid": 153
+    },
+    {
+        "bookingid": 471
+    },
+    {
+        "bookingid": 277
+    },
+    {
+        "bookingid": 568
+    },
+    {
+        "bookingid": 94
+    },
+    {
+        "bookingid": 193
+    },
+    {
+        "bookingid": 287
+    },
+    {
+        "bookingid": 483
+    },
+    {
+        "bookingid": 374
+    },
+    {
+        "bookingid": 224
+    },
+    {
+        "bookingid": 491
+    },
+    {
+        "bookingid": 352
+    },
+    {
+        "bookingid": 14
+    },
+    {
+        "bookingid": 396
+    },
+    {
+        "bookingid": 439
+    },
+    {
+        "bookingid": 16
+    },
+    {
+        "bookingid": 109
+    },
+    {
+        "bookingid": 571
+    },
+    {
+        "bookingid": 111
+    },
+    {
+        "bookingid": 516
+    },
+    {
+        "bookingid": 447
+    },
+    {
+        "bookingid": 427
+    },
+    {
+        "bookingid": 273
+    },
+    {
+        "bookingid": 54
     },
     {
         "bookingid": 335
     },
     {
-        "bookingid": 534
+        "bookingid": 29
+    },
+    {
+        "bookingid": 248
+    },
+    {
+        "bookingid": 283
+    },
+    {
+        "bookingid": 404
+    },
+    {
+        "bookingid": 625
+    },
+    {
+        "bookingid": 214
+    },
+    {
+        "bookingid": 493
+    },
+    {
+        "bookingid": 500
+    },
+    {
+        "bookingid": 421
+    },
+    {
+        "bookingid": 239
+    },
+    {
+        "bookingid": 195
+    },
+    {
+        "bookingid": 627
+    },
+    {
+        "bookingid": 541
+    },
+    {
+        "bookingid": 606
+    },
+    {
+        "bookingid": 433
+    },
+    {
+        "bookingid": 401
+    },
+    {
+        "bookingid": 390
+    },
+    {
+        "bookingid": 596
+    },
+    {
+        "bookingid": 535
+    },
+    {
+        "bookingid": 33
+    },
+    {
+        "bookingid": 377
+    },
+    {
+        "bookingid": 360
+    },
+    {
+        "bookingid": 477
+    },
+    {
+        "bookingid": 144
+    },
+    {
+        "bookingid": 18
+    },
+    {
+        "bookingid": 4
+    },
+    {
+        "bookingid": 77
+    },
+    {
+        "bookingid": 354
+    },
+    {
+        "bookingid": 254
+    },
+    {
+        "bookingid": 42
+    },
+    {
+        "bookingid": 479
+    },
+    {
+        "bookingid": 167
+    },
+    {
+        "bookingid": 553
+    },
+    {
+        "bookingid": 373
+    },
+    {
+        "bookingid": 532
+    },
+    {
+        "bookingid": 496
+    },
+    {
+        "bookingid": 461
+    },
+    {
+        "bookingid": 53
+    },
+    {
+        "bookingid": 363
+    },
+    {
+        "bookingid": 307
+    },
+    {
+        "bookingid": 137
+    },
+    {
+        "bookingid": 518
+    },
+    {
+        "bookingid": 48
+    },
+    {
+        "bookingid": 84
+    },
+    {
+        "bookingid": 17
+    },
+    {
+        "bookingid": 163
+    },
+    {
+        "bookingid": 416
+    },
+    {
+        "bookingid": 403
+    },
+    {
+        "bookingid": 577
+    },
+    {
+        "bookingid": 225
+    },
+    {
+        "bookingid": 361
+    },
+    {
+        "bookingid": 394
+    },
+    {
+        "bookingid": 235
+    },
+    {
+        "bookingid": 364
+    },
+    {
+        "bookingid": 342
+    },
+    {
+        "bookingid": 258
+    },
+    {
+        "bookingid": 388
+    },
+    {
+        "bookingid": 282
+    },
+    {
+        "bookingid": 20
+    },
+    {
+        "bookingid": 350
+    },
+    {
+        "bookingid": 285
+    },
+    {
+        "bookingid": 566
+    },
+    {
+        "bookingid": 295
+    },
+    {
+        "bookingid": 405
+    },
+    {
+        "bookingid": 30
+    },
+    {
+        "bookingid": 86
     },
     {
         "bookingid": 190
@@ -1612,93 +1025,767 @@ Via: 1.1 vegur
         "bookingid": 393
     },
     {
-        "bookingid": 238
-    },
-    {
-        "bookingid": 361
-    },
-    {
         "bookingid": 348
     },
     {
-        "bookingid": 407
+        "bookingid": 495
     },
     {
-        "bookingid": 435
+        "bookingid": 497
     },
     {
-        "bookingid": 583
+        "bookingid": 300
+    },
+    {
+        "bookingid": 208
+    },
+    {
+        "bookingid": 523
+    },
+    {
+        "bookingid": 455
+    },
+    {
+        "bookingid": 31
+    },
+    {
+        "bookingid": 464
+    },
+    {
+        "bookingid": 27
+    },
+    {
+        "bookingid": 382
+    },
+    {
+        "bookingid": 126
+    },
+    {
+        "bookingid": 209
+    },
+    {
+        "bookingid": 266
+    },
+    {
+        "bookingid": 259
+    },
+    {
+        "bookingid": 281
+    },
+    {
+        "bookingid": 51
+    },
+    {
+        "bookingid": 524
+    },
+    {
+        "bookingid": 207
+    },
+    {
+        "bookingid": 201
+    },
+    {
+        "bookingid": 440
+    },
+    {
+        "bookingid": 250
+    },
+    {
+        "bookingid": 132
+    },
+    {
+        "bookingid": 105
+    },
+    {
+        "bookingid": 519
+    },
+    {
+        "bookingid": 232
+    },
+    {
+        "bookingid": 191
+    },
+    {
+        "bookingid": 438
+    },
+    {
+        "bookingid": 23
+    },
+    {
+        "bookingid": 582
+    },
+    {
+        "bookingid": 454
+    },
+    {
+        "bookingid": 359
     },
     {
         "bookingid": 8
     },
     {
-        "bookingid": 520
+        "bookingid": 599
+    },
+    {
+        "bookingid": 73
+    },
+    {
+        "bookingid": 347
+    },
+    {
+        "bookingid": 529
+    },
+    {
+        "bookingid": 136
+    },
+    {
+        "bookingid": 616
+    },
+    {
+        "bookingid": 68
+    },
+    {
+        "bookingid": 312
+    },
+    {
+        "bookingid": 330
+    },
+    {
+        "bookingid": 91
+    },
+    {
+        "bookingid": 316
+    },
+    {
+        "bookingid": 559
+    },
+    {
+        "bookingid": 162
+    },
+    {
+        "bookingid": 5
+    },
+    {
+        "bookingid": 614
+    },
+    {
+        "bookingid": 590
+    },
+    {
+        "bookingid": 515
+    },
+    {
+        "bookingid": 318
+    },
+    {
+        "bookingid": 607
+    },
+    {
+        "bookingid": 297
+    },
+    {
+        "bookingid": 12
+    },
+    {
+        "bookingid": 104
+    },
+    {
+        "bookingid": 434
+    },
+    {
+        "bookingid": 570
+    },
+    {
+        "bookingid": 328
+    },
+    {
+        "bookingid": 261
+    },
+    {
+        "bookingid": 159
+    },
+    {
+        "bookingid": 386
+    },
+    {
+        "bookingid": 123
+    },
+    {
+        "bookingid": 62
+    },
+    {
+        "bookingid": 198
+    },
+    {
+        "bookingid": 288
+    },
+    {
+        "bookingid": 578
+    },
+    {
+        "bookingid": 315
+    },
+    {
+        "bookingid": 66
+    },
+    {
+        "bookingid": 169
+    },
+    {
+        "bookingid": 574
+    },
+    {
+        "bookingid": 544
+    },
+    {
+        "bookingid": 358
+    },
+    {
+        "bookingid": 584
+    },
+    {
+        "bookingid": 444
+    },
+    {
+        "bookingid": 446
+    },
+    {
+        "bookingid": 269
+    },
+    {
+        "bookingid": 555
+    },
+    {
+        "bookingid": 183
+    },
+    {
+        "bookingid": 451
+    },
+    {
+        "bookingid": 116
+    },
+    {
+        "bookingid": 197
+    },
+    {
+        "bookingid": 389
+    },
+    {
+        "bookingid": 384
+    },
+    {
+        "bookingid": 173
+    },
+    {
+        "bookingid": 567
+    },
+    {
+        "bookingid": 210
+    },
+    {
+        "bookingid": 482
+    },
+    {
+        "bookingid": 539
+    },
+    {
+        "bookingid": 581
+    },
+    {
+        "bookingid": 594
+    },
+    {
+        "bookingid": 522
+    },
+    {
+        "bookingid": 36
+    },
+    {
+        "bookingid": 329
+    },
+    {
+        "bookingid": 187
+    },
+    {
+        "bookingid": 411
+    },
+    {
+        "bookingid": 463
+    },
+    {
+        "bookingid": 368
+    },
+    {
+        "bookingid": 327
+    },
+    {
+        "bookingid": 517
+    },
+    {
+        "bookingid": 456
+    },
+    {
+        "bookingid": 601
+    },
+    {
+        "bookingid": 422
+    },
+    {
+        "bookingid": 317
+    },
+    {
+        "bookingid": 294
+    },
+    {
+        "bookingid": 603
+    },
+    {
+        "bookingid": 108
+    },
+    {
+        "bookingid": 426
+    },
+    {
+        "bookingid": 286
+    },
+    {
+        "bookingid": 247
+    },
+    {
+        "bookingid": 392
+    },
+    {
+        "bookingid": 321
+    },
+    {
+        "bookingid": 299
+    },
+    {
+        "bookingid": 199
+    },
+    {
+        "bookingid": 415
+    },
+    {
+        "bookingid": 452
+    },
+    {
+        "bookingid": 420
+    },
+    {
+        "bookingid": 379
+    },
+    {
+        "bookingid": 160
+    },
+    {
+        "bookingid": 608
+    },
+    {
+        "bookingid": 551
+    },
+    {
+        "bookingid": 71
+    },
+    {
+        "bookingid": 509
+    },
+    {
+        "bookingid": 470
+    },
+    {
+        "bookingid": 397
+    },
+    {
+        "bookingid": 13
+    },
+    {
+        "bookingid": 472
+    },
+    {
+        "bookingid": 21
+    },
+    {
+        "bookingid": 49
+    },
+    {
+        "bookingid": 40
+    },
+    {
+        "bookingid": 562
+    },
+    {
+        "bookingid": 226
     },
     {
         "bookingid": 55
     },
     {
+        "bookingid": 253
+    },
+    {
+        "bookingid": 628
+    },
+    {
+        "bookingid": 275
+    },
+    {
+        "bookingid": 449
+    },
+    {
+        "bookingid": 265
+    },
+    {
+        "bookingid": 64
+    },
+    {
+        "bookingid": 256
+    },
+    {
+        "bookingid": 579
+    },
+    {
+        "bookingid": 573
+    },
+    {
+        "bookingid": 305
+    },
+    {
+        "bookingid": 90
+    },
+    {
+        "bookingid": 548
+    },
+    {
+        "bookingid": 346
+    },
+    {
+        "bookingid": 387
+    },
+    {
+        "bookingid": 182
+    },
+    {
+        "bookingid": 262
+    },
+    {
+        "bookingid": 558
+    },
+    {
+        "bookingid": 597
+    },
+    {
+        "bookingid": 489
+    },
+    {
+        "bookingid": 468
+    },
+    {
+        "bookingid": 170
+    },
+    {
+        "bookingid": 267
+    },
+    {
+        "bookingid": 362
+    },
+    {
+        "bookingid": 157
+    },
+    {
+        "bookingid": 76
+    },
+    {
+        "bookingid": 145
+    },
+    {
+        "bookingid": 165
+    },
+    {
+        "bookingid": 474
+    },
+    {
+        "bookingid": 83
+    },
+    {
+        "bookingid": 168
+    },
+    {
+        "bookingid": 240
+    },
+    {
+        "bookingid": 298
+    },
+    {
+        "bookingid": 341
+    },
+    {
+        "bookingid": 336
+    },
+    {
         "bookingid": 365
+    },
+    {
+        "bookingid": 345
+    },
+    {
+        "bookingid": 113
+    },
+    {
+        "bookingid": 534
+    },
+    {
+        "bookingid": 102
+    },
+    {
+        "bookingid": 178
+    },
+    {
+        "bookingid": 366
+    },
+    {
+        "bookingid": 161
+    },
+    {
+        "bookingid": 485
+    },
+    {
+        "bookingid": 50
+    },
+    {
+        "bookingid": 540
+    },
+    {
+        "bookingid": 605
+    },
+    {
+        "bookingid": 376
+    },
+    {
+        "bookingid": 473
+    },
+    {
+        "bookingid": 11
     },
     {
         "bookingid": 425
     },
     {
-        "bookingid": 125
+        "bookingid": 284
     },
     {
-        "bookingid": 395
+        "bookingid": 460
+    },
+    {
+        "bookingid": 543
+    },
+    {
+        "bookingid": 204
+    },
+    {
+        "bookingid": 127
+    },
+    {
+        "bookingid": 572
+    },
+    {
+        "bookingid": 445
+    },
+    {
+        "bookingid": 274
+    },
+    {
+        "bookingid": 206
+    },
+    {
+        "bookingid": 419
+    },
+    {
+        "bookingid": 133
+    },
+    {
+        "bookingid": 613
+    },
+    {
+        "bookingid": 480
+    },
+    {
+        "bookingid": 410
+    },
+    {
+        "bookingid": 194
+    },
+    {
+        "bookingid": 521
+    },
+    {
+        "bookingid": 383
+    },
+    {
+        "bookingid": 205
+    },
+    {
+        "bookingid": 231
+    },
+    {
+        "bookingid": 408
+    },
+    {
+        "bookingid": 436
+    },
+    {
+        "bookingid": 428
+    },
+    {
+        "bookingid": 172
+    },
+    {
+        "bookingid": 177
+    },
+    {
+        "bookingid": 486
+    },
+    {
+        "bookingid": 537
+    },
+    {
+        "bookingid": 402
+    },
+    {
+        "bookingid": 82
+    },
+    {
+        "bookingid": 308
+    },
+    {
+        "bookingid": 181
+    },
+    {
+        "bookingid": 510
+    },
+    {
+        "bookingid": 407
+    },
+    {
+        "bookingid": 270
+    },
+    {
+        "bookingid": 331
+    },
+    {
+        "bookingid": 264
+    },
+    {
+        "bookingid": 494
+    },
+    {
+        "bookingid": 576
+    },
+    {
+        "bookingid": 218
+    },
+    {
+        "bookingid": 322
+    },
+    {
+        "bookingid": 467
+    },
+    {
+        "bookingid": 150
+    },
+    {
+        "bookingid": 138
+    },
+    {
+        "bookingid": 37
+    },
+    {
+        "bookingid": 506
+    },
+    {
+        "bookingid": 487
+    },
+    {
+        "bookingid": 476
+    },
+    {
+        "bookingid": 595
+    },
+    {
+        "bookingid": 372
+    },
+    {
+        "bookingid": 413
+    },
+    {
+        "bookingid": 179
+    },
+    {
+        "bookingid": 175
+    },
+    {
+        "bookingid": 484
+    },
+    {
+        "bookingid": 598
+    },
+    {
+        "bookingid": 549
+    },
+    {
+        "bookingid": 56
+    },
+    {
+        "bookingid": 604
     }
 ]
 ]]></system-out>
-    <system-err><![CDATA[out 25, 2021 8:42:56 PM io.qameta.allure.AllureLifecycle startStep
+    <system-err><![CDATA[out 27, 2021 5:13:17 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:42:57 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:18 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:42:57 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:18 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:42:57 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:18 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:42:58 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:19 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:42:58 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:19 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:42:58 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:19 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:42:59 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:20 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:42:59 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:20 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:42:59 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:20 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:00 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:21 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:00 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:21 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:43:00 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:21 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:01 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:21 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:01 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:21 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
 ]]></system-err>
   </testcase>
-  <testcase name="listaReservaEspecifica" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.994"/>
-  <testcase name="validaListagemDeIdsDasReservas" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.799"/>
-  <testcase name="validaListagemDeReservasPeloFiltroFirstname" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.799"/>
-  <testcase name="validaListagemDeReservasPelosFiltrosCheckinECheckout" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.822"/>
-  <testcase name="validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.997">
+  <testcase name="listaReservaEspecifica" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.962"/>
+  <testcase name="validaListagemDeIdsDasReservas" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.895"/>
+  <testcase name="validaListagemDeReservasPeloFiltroFirstname" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.836"/>
+  <testcase name="validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="4.059">
     <failure message="1 expectation failed.&#10;JSON path size() doesn&apos;t match.&#10;Expected: a value greater than &lt;0&gt;&#10;  Actual: 0&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
 Expected: a value greater than <0>
   Actual: 0
 
-	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout(GetBookingTest.java:202)
+	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaListagemDeReservasPelosFiltrosFirstnameECheckinECheckout(GetBookingTest.java:224)
 ]]></failure>
     <system-out><![CDATA[Request method:	GET
-Request URI:	https://treinamento-api.herokuapp.com/booking?firstname=Vados&checkin=2021-10-25&checkout=2022-10-25
+Request URI:	https://treinamento-api.herokuapp.com/booking?firstname=Cristiano&checkin=2018-01-01&checkout=2019-01-01
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -1708,6 +1795,7 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+
 HTTP/1.1 200 OK
 Server: Cowboy
 Connection: keep-alive
@@ -1715,61 +1803,187 @@ X-Powered-By: Express
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
-Date: Mon, 25 Oct 2021 23:43:30 GMT
+Date: Wed, 27 Oct 2021 20:13:45 GMT
 Via: 1.1 vegur
 
 [
     
 ]
 ]]></system-out>
-    <system-err><![CDATA[out 25, 2021 8:43:24 PM io.qameta.allure.AllureLifecycle startStep
+    <system-err><![CDATA[out 27, 2021 5:13:37 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:25 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:38 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:25 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:38 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:43:25 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:38 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:26 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:39 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:26 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:39 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:43:26 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:39 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:27 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:40 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:27 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:40 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:43:27 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:40 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:28 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:41 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:28 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:41 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
-out 25, 2021 8:43:28 PM io.qameta.allure.AllureLifecycle startStep
+out 27, 2021 5:13:41 PM io.qameta.allure.AllureLifecycle startStep
 GRAVE: Could not start step: no test case running
-out 25, 2021 8:43:29 PM io.qameta.allure.AllureLifecycle updateStep
+out 27, 2021 5:13:42 PM io.qameta.allure.AllureLifecycle updateStep
 GRAVE: Could not update step: no step running
-out 25, 2021 8:43:29 PM io.qameta.allure.AllureLifecycle stopStep
+out 27, 2021 5:13:42 PM io.qameta.allure.AllureLifecycle stopStep
 GRAVE: Could not stop step: no step running
 ]]></system-err>
   </testcase>
-  <testcase name="validaSchemaDeUmaReservaEspecifica" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="1.136"/>
-  <testcase name="validaListagemDeReservasPeloFiltroCheckout" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="2.2"/>
-  <testcase name="validaSchemaDaListagemDeReservas" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.857"/>
-  <testcase name="validaListagemDeReservasPeloFiltroCheckin" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="1.844"/>
-  <testcase name="validaListagemDeReservasPeloFiltroLastname" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.895"/>
-  <testcase name="validaRetornoDeTokenParaUsuario" classname="br.com.restassuredapitesting.tests.auth.tests.PostAuthTest" time="0.965"/>
-  <testcase name="validarAlteracaoDeUmaReservaUtilizandoToken" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="1.893"/>
-  <testcase name="validarNaoAlteracaoDeUmaReservaSemEnviarToken" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="0.913"/>
-  <testcase name="validarNaoAlteracaoDeUmaReservaInexistente" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="1.634"/>
-  <testcase name="validarNaoAlteracaoDeUmaReservaUtilizandoTokenInvalido" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="0.898"/>
-  <testcase name="validarTentativaDeExclusaoDeReservaSemAutorizacao" classname="br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest" time="0.793"/>
-  <testcase name="validarTentativaDeExclusaoDeReservaInexistente" classname="br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest" time="1.631"/>
-  <testcase name="validarExclusaoDeUmaReservaUtilizandoToken" classname="br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest" time="1.596"/>
-  <testcase name="validarCriacaoDeMaisDeUmaReservaEmSequencia" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="2.513"/>
-  <testcase name="validarCriacaoDeUmaReserva" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.93"/>
-  <testcase name="validarCodigo418NaCriacaoDeUmaReservaComAccpetInvalidoNoHeader" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.783"/>
-  <testcase name="validarCriacaoDeUmaReservaComParametrosAdicionaisNoPayload" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.817"/>
-  <testcase name="validarErro500QuandoPayloadInvalidoNaCriacaoDeUmaReserva" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.805"/>
+  <testcase name="validaSchemaDeUmaReservaEspecifica" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="1.103"/>
+  <testcase name="validaListagemDeReservasPeloFiltroCheckout" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.852"/>
+  <testcase name="validaSchemaDaListagemDeReservas" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.858"/>
+  <testcase name="validaListagemDeReservasPeloFiltroCheckoutECheckout" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.799"/>
+  <testcase name="validaListagemDeReservasPeloFiltroCheckin" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.821">
+    <failure message="1 expectation failed.&#10;JSON path size() doesn&apos;t match.&#10;Expected: a value greater than &lt;0&gt;&#10;  Actual: 0&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: a value greater than <0>
+  Actual: 0
+
+	at br.com.restassuredapitesting.tests.booking.tests.GetBookingTest.validaListagemDeReservasPeloFiltroCheckin(GetBookingTest.java:152)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://treinamento-api.herokuapp.com/booking?checkin=2021-10-10
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+Date: Wed, 27 Oct 2021 20:14:10 GMT
+Via: 1.1 vegur
+
+[
+    
+]
+]]></system-out>
+    <system-err><![CDATA[out 27, 2021 5:14:06 PM io.qameta.allure.AllureLifecycle startStep
+GRAVE: Could not start step: no test case running
+out 27, 2021 5:14:06 PM io.qameta.allure.AllureLifecycle updateStep
+GRAVE: Could not update step: no step running
+out 27, 2021 5:14:06 PM io.qameta.allure.AllureLifecycle stopStep
+GRAVE: Could not stop step: no step running
+out 27, 2021 5:14:06 PM io.qameta.allure.AllureLifecycle startStep
+GRAVE: Could not start step: no test case running
+out 27, 2021 5:14:07 PM io.qameta.allure.AllureLifecycle updateStep
+GRAVE: Could not update step: no step running
+out 27, 2021 5:14:07 PM io.qameta.allure.AllureLifecycle stopStep
+GRAVE: Could not stop step: no step running
+out 27, 2021 5:14:07 PM io.qameta.allure.AllureLifecycle startStep
+GRAVE: Could not start step: no test case running
+out 27, 2021 5:14:08 PM io.qameta.allure.AllureLifecycle updateStep
+GRAVE: Could not update step: no step running
+out 27, 2021 5:14:08 PM io.qameta.allure.AllureLifecycle stopStep
+GRAVE: Could not stop step: no step running
+out 27, 2021 5:14:08 PM io.qameta.allure.AllureLifecycle startStep
+GRAVE: Could not start step: no test case running
+out 27, 2021 5:14:09 PM io.qameta.allure.AllureLifecycle updateStep
+GRAVE: Could not update step: no step running
+out 27, 2021 5:14:09 PM io.qameta.allure.AllureLifecycle stopStep
+GRAVE: Could not stop step: no step running
+out 27, 2021 5:14:09 PM io.qameta.allure.AllureLifecycle startStep
+GRAVE: Could not start step: no test case running
+out 27, 2021 5:14:10 PM io.qameta.allure.AllureLifecycle updateStep
+GRAVE: Could not update step: no step running
+out 27, 2021 5:14:10 PM io.qameta.allure.AllureLifecycle stopStep
+GRAVE: Could not stop step: no step running
+]]></system-err>
+  </testcase>
+  <testcase name="validaListagemDeReservasPeloFiltroLastname" classname="br.com.restassuredapitesting.tests.booking.tests.GetBookingTest" time="0.813"/>
+  <testcase name="validaRetornoDeTokenParaUsuario" classname="br.com.restassuredapitesting.tests.auth.tests.PostAuthTest" time="0.794"/>
+  <testcase name="validarAlteracaoDeUmaReservaUtilizandoToken" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="1.79"/>
+  <testcase name="validarNaoAlteracaoDeUmaReservaSemEnviarToken" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="0.798"/>
+  <testcase name="validarNaoAlteracaoDeUmaReservaInexistente" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="1.632"/>
+  <testcase name="validarNaoAlteracaoDeUmaReservaUtilizandoTokenInvalido" classname="br.com.restassuredapitesting.tests.booking.tests.PutBookingTest" time="0.84"/>
+  <testcase name="validarTentativaDeExclusaoDeReservaSemAutorizacao" classname="br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest" time="0.82"/>
+  <testcase name="validarTentativaDeExclusaoDeReservaInexistente" classname="br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest" time="1.654"/>
+  <testcase name="validarExclusaoDeUmaReservaUtilizandoToken" classname="br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest" time="1.652"/>
+  <testcase name="validarCriacaoDeMaisDeUmaReservaEmSequencia" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="2.518"/>
+  <testcase name="validarCriacaoDeUmaReserva" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.828"/>
+  <testcase name="validarCodigo418NaCriacaoDeUmaReservaComAccpetInvalidoNoHeader" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.81"/>
+  <testcase name="validarCriacaoDeUmaReservaComParametrosAdicionaisNoPayload" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.832">
+    <failure message="1 expectation failed.&#10;JSON path nickname doesn&apos;t match.&#10;Expected: is &quot;lgc2&quot;&#10;  Actual: null&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+JSON path nickname doesn't match.
+Expected: is "lgc2"
+  Actual: null
+
+	at br.com.restassuredapitesting.tests.booking.tests.PostBookingTest.validarCriacaoDeUmaReservaComParametrosAdicionaisNoPayload(PostBookingTest.java:69)
+</failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://treinamento-api.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Cristiano",
+    "additionalneeds": "Breakfast",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "totalprice": 111,
+    "nickname": "lgc2",
+    "depositpaid": true,
+    "lastname": "Ronaldo"
+}
+
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 204
+Etag: W/"cc-BcyvL6dQskh1AydOv0FtBb3txm0"
+Date: Wed, 27 Oct 2021 20:14:36 GMT
+Via: 1.1 vegur
+
+{
+    "bookingid": 687,
+    "booking": {
+        "firstname": "Cristiano",
+        "lastname": "Ronaldo",
+        "totalprice": 111,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="validarErro500QuandoPayloadInvalidoNaCriacaoDeUmaReserva" classname="br.com.restassuredapitesting.tests.booking.tests.PostBookingTest" time="0.816"/>
 </testsuite>

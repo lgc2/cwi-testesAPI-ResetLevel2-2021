@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.is;
 
 @Feature("Feature - Criação de Reserva")
 public class PostBookingTest extends BaseTest {
@@ -28,7 +29,6 @@ public class PostBookingTest extends BaseTest {
         postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
                 .then()
                 .statusCode(200)
-                .log().all()
                 .body("size()", greaterThan(0));
     }
 
@@ -40,7 +40,6 @@ public class PostBookingTest extends BaseTest {
         // Atributo "firstname" manipulado no payload para que ele esteja inválido
         postBookingRequest.createBooking(bookingPayLoads.bookingInvalidPayload())
                 .then()
-                .log().all()
                 .statusCode(500);
     }
 
@@ -49,26 +48,13 @@ public class PostBookingTest extends BaseTest {
     @Category({AllTests.class, E2eTests.class})
     @DisplayName("Validar a criação de mais de uma reserva em sequência")
     public void validarCriacaoDeMaisDeUmaReservaEmSequencia() {
-        // Postou 1ª vez
-        postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
-                .then()
-                .statusCode(200)
-                .log().all()
-                .body("size()", greaterThan(0));
-
-        // Postou 2ª vez
-        postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
-                .then()
-                .statusCode(200)
-                .log().all()
-                .body("size()", greaterThan(0));
-
-        // Postou 3ª vez
-        postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
-                .then()
-                .statusCode(200)
-                .log().all()
-                .body("size()", greaterThan(0));
+        // Postando três vezes seguidas
+        for(int i = 0; i < 3; i++) {
+            postBookingRequest.createBooking(bookingPayLoads.payloadValidBooking())
+                    .then()
+                    .statusCode(200)
+                    .body("size()", greaterThan(0));
+        }
     }
 
     @Test
@@ -79,8 +65,8 @@ public class PostBookingTest extends BaseTest {
         postBookingRequest.createBooking(bookingPayLoads.addMoreParametersInThePayloadBooking())
                 .then()
                 .statusCode(200)
-                .log().all()
-                .body("size()", greaterThan(0));
+                .log().ifValidationFails()
+                .body("nickname", is("lgc2"));
 
         // Parâmetro "nickname" foi adicionado ao corpo de um payload válido.
         // O que ocorre é que a reserva é criada normalmente simplesmente ignorando os parâmetros extras.
@@ -93,7 +79,6 @@ public class PostBookingTest extends BaseTest {
     public void validarCodigo418NaCriacaoDeUmaReservaComAccpetInvalidoNoHeader() {
         postBookingRequest.createBookingInvalidAcceptHeader(bookingPayLoads.payloadValidBooking())
                 .then()
-                .log().all()
                 .statusCode(418);
     }
 
